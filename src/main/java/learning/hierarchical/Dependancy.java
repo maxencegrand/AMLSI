@@ -5,9 +5,9 @@ package learning.hierarchical;
 
 import java.util.Map;
 
-import fsm.Method;
-import fsm.Symbol;
-import fsm.Action;
+import fr.uga.generator.symbols.Action;
+import fr.uga.generator.symbols.Method;
+import fr.uga.generator.symbols.Symbol;
 
 import java.io.BufferedWriter;
 import java.io.FileWriter;

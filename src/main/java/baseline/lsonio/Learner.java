@@ -4,8 +4,8 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
 
-import fsm.Pair;
-import fsm.Symbol;
+import fr.uga.generator.symbols.Symbol;
+import fr.uga.generator.utils.Pair;
 
 /**
  * Implements the perceptron vector used for the LSO-NIO approach

@@ -4,16 +4,21 @@ import java.util.Map;
 import java.util.HashMap;
 import java.util.List;
 import java.util.ArrayList;
-import fsm.Symbol;
-import fsm.Trace;
 import simulator.Movement;
 import fsm.Bloc;
-import fsm.Example;
 import fsm.DFA;
-import fsm.Pair;
-import fsm.Sample;
+import fr.uga.generator.utils.Pair;
 import java.util.Objects;
-import exception.BlocException;
+
+import fr.uga.generator.exception.BlocException;
+import fr.uga.generator.symbols.Symbol;
+import fr.uga.generator.symbols.TypeHierarchy;
+import fr.uga.generator.symbols.trace.CompressedNegativeExample;
+import fr.uga.generator.symbols.trace.Example;
+import fr.uga.generator.symbols.trace.Observation;
+import fr.uga.generator.symbols.trace.ObservedExample;
+import fr.uga.generator.symbols.trace.Sample;
+import fr.uga.generator.symbols.trace.Trace;
 
 /**
  * This class represents a candidate domain

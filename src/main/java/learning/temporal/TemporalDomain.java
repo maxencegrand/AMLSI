@@ -10,13 +10,14 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-import fsm.Pair;
-import fsm.Symbol;
+import fr.uga.generator.simulator.temporal.TemporalExample;
+import fr.uga.generator.simulator.temporal.TemporalOracle;
+import fr.uga.generator.symbols.Symbol;
+import fr.uga.generator.symbols.trace.CompressedTemporalNegativeExample;
+import fr.uga.generator.symbols.trace.Observation;
+import fr.uga.generator.utils.Pair;
 import learning.Domain;
 import learning.DomainInstantiation;
-import learning.Observation;
-import simulator.temporal.TemporalExample;
-import simulator.temporal.TemporalOracle;
 /**
  * @author Maxence Grand
  *

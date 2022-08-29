@@ -3,22 +3,22 @@
  */
 package main.experiment;
 
+import fr.uga.generator.generator.Generator;
+import fr.uga.generator.simulator.Simulator;
+import fr.uga.generator.simulator.StripsSimulator;
+import fr.uga.generator.symbols.Symbol;
+import fr.uga.generator.symbols.trace.Example;
+import fr.uga.generator.symbols.trace.Sample;
+import fr.uga.generator.symbols.trace.Trace;
+import fr.uga.generator.utils.Pair;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Random;
-import fsm.Example;
 import fsm.DFA;
-import fsm.Pair;
-import fsm.Sample;
-import fsm.Symbol;
-import fsm.Trace;
 import learning.AutomataLearning;
 import learning.DomainLearning;
-import learning.Generator;
 import main.Argument;
 import main.Properties;
-import simulator.Simulator;
-import simulator.StripsSimulator;
 
 /**
  * @author Maxence Grand

@@ -1,10 +1,12 @@
 package baseline.lsonio;
 import java.util.Map;
 import java.util.PriorityQueue;
+
+import fr.uga.generator.symbols.Symbol;
+
 import java.util.ArrayList;
 import java.util.List;
-import fsm.Pair;
-import fsm.Symbol;
+import fr.uga.generator.utils.Pair;
 import learning.Measure;
 
 /**

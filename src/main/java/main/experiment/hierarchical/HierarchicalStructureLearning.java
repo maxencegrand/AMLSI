@@ -4,32 +4,25 @@
 package main.experiment.hierarchical;
 
 import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.LinkedHashMap;
-import java.util.Map;
 import java.util.List;
 import java.util.Random;
-
-import fsm.Example;
+import fr.uga.generator.generator.Generator;
+import fr.uga.generator.generator.hierarchical.HierarchicalGenerator;
+import fr.uga.generator.simulator.hierarchical.HierarchicalSimulator;
+import fr.uga.generator.simulator.hierarchical.HtnSimulator;
+import fr.uga.generator.symbols.Method;
+import fr.uga.generator.symbols.Symbol;
+import fr.uga.generator.symbols.Task;
+import fr.uga.generator.symbols.trace.Example;
+import fr.uga.generator.symbols.trace.Sample;
+import fr.uga.generator.symbols.trace.Trace;
+import fr.uga.generator.utils.Pair;
 import fsm.DFA;
-import fsm.Pair;
 import fsm.Partition;
-import fsm.RandomTaskTrace;
-import fsm.Sample;
-import fsm.Symbol;
-import fsm.Task;
-import fsm.TaskTrace;
-import fsm.Trace;
-import fsm.Method;
 import learning.AutomataLearning;
-import learning.DomainLearning;
-import learning.Generator;
-import learning.hierarchical.HierarchicalGenerator;
 import learning.hierarchical.HtnLearner;
 import main.Argument;
 import main.Properties;
-import simulator.hierarchical.HierarchicalSimulator;
-import simulator.hierarchical.HtnSimulator;
 
 /**
  * @author Maxence Grand

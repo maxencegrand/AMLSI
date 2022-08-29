@@ -1,14 +1,18 @@
 package learning;
 
 import java.util.Map;
+
+import fr.uga.generator.exception.BlocException;
+import fr.uga.generator.symbols.Symbol;
+import fr.uga.generator.symbols.trace.Observation;
+import fr.uga.generator.symbols.trace.ObservedExample;
+import fr.uga.generator.symbols.trace.Sample;
+import fr.uga.generator.symbols.trace.Trace;
+
 import java.util.HashMap;
 import java.util.List;
 import java.util.ArrayList;
-import fsm.Symbol;
-import fsm.Trace;
 import fsm.DFA;
-import fsm.Sample;
-import exception.BlocException;
 
 /**
  * This class represent the mapping "Action" "state in automaton, observed state"

@@ -4,7 +4,7 @@ import java.util.List;
 import java.util.ArrayList;
 import java.util.Map;
 import java.util.HashMap;
-import exception.BlocException;
+import fr.uga.generator.exception.BlocException;
 /**
  * This class represents the state and bloc partition &#960; of an automaton
  * @author Maxence Grand

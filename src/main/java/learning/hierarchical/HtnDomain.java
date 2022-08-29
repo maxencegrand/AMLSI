@@ -11,23 +11,23 @@ import java.util.LinkedList;
 import java.util.List;
 import java.util.Map;
 
+import fr.uga.generator.simulator.hierarchical.HierarchicalSimulator;
+import fr.uga.generator.symbols.Action;
+import fr.uga.generator.symbols.Method;
+import fr.uga.generator.symbols.Predicate;
+import fr.uga.generator.symbols.Symbol;
+import fr.uga.generator.symbols.Task;
+import fr.uga.generator.symbols.TypeHierarchy;
+import fr.uga.generator.symbols.trace.DecompositionTrace;
+import fr.uga.generator.symbols.trace.Example;
+import fr.uga.generator.symbols.trace.Observation;
+import fr.uga.generator.symbols.trace.Sample;
+import fr.uga.generator.symbols.trace.Trace;
 import fr.uga.pddl4j.parser.PDDLDomain;
 import fr.uga.pddl4j.parser.PDDLExpression;
 import fr.uga.pddl4j.parser.PDDLParser;
-import fsm.DecompositionTrace;
-import fsm.Example;
-import fsm.Method;
-import fsm.Pair;
-import fsm.Predicate;
-import fsm.Sample;
-import fsm.Symbol;
-import fsm.Task;
-import fsm.Trace;
+import fr.uga.generator.utils.Pair;
 import learning.Domain;
-import learning.Observation;
-import learning.TypeHierarchy;
-import simulator.hierarchical.HierarchicalSimulator;
-import simulator.hierarchical.HtnSimulator;
 import utils.Utils;
 
 /**
@@ -231,7 +231,7 @@ public class HtnDomain extends Domain{
 		PDDLDomain htn = parser.getDomain();
 		List<Method> methods = new ArrayList<>();
 		htn.getMethods().forEach(m -> {
-			fsm.Method method = null;
+			fr.uga.generator.symbols.Method method = null;
 			//Extract Name
 			String name = m.getName().getImage();
 			//Extract Task to Decompose
@@ -297,9 +297,9 @@ public class HtnDomain extends Domain{
 				}
 			}
 			//Generate Method
-			method = new fsm.Method(name, param, (Task) task_);
+			method = new Method(name, param, (Task) task_);
 			for(Symbol t : subtasks_) {
-				method.add((fsm.Action)t);
+				method.add((Action)t);
 			}
 			this.getDomain().put(method, new Pair<>(preconditions, new Observation()));
 			if(method != null) {

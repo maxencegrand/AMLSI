@@ -6,6 +6,9 @@ package fsm;
 import java.util.List;
 import java.util.Objects;
 
+import fr.uga.generator.symbols.Method;
+import fr.uga.generator.symbols.Symbol;
+
 
 /**
  * @author Maxence Grand

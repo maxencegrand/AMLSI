@@ -4,9 +4,21 @@ import java.util.List;
 import java.util.ArrayList;
 import java.util.Map;
 import java.util.concurrent.ConcurrentHashMap;
+
+import fr.uga.generator.exception.BlocException;
+import fr.uga.generator.generator.Generator;
+import fr.uga.generator.symbols.Method;
+import fr.uga.generator.symbols.Symbol;
+import fr.uga.generator.symbols.Task;
+import fr.uga.generator.symbols.TypeHierarchy;
+import fr.uga.generator.symbols.trace.Example;
+import fr.uga.generator.symbols.trace.Observation;
+import fr.uga.generator.symbols.trace.Sample;
+import fr.uga.generator.symbols.trace.Trace;
+import fr.uga.generator.utils.Pair;
+
 import java.util.HashMap;
 import fsm.*;
-import exception.BlocException;
 
 /**
  * This class implements the action model learning module.

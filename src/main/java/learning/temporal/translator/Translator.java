@@ -14,12 +14,12 @@ import java.util.LinkedList;
 import java.util.List;
 import java.util.Map;
 
+import fr.uga.generator.symbols.TypeHierarchy;
+import fr.uga.generator.utils.Pair;
 import fr.uga.pddl4j.parser.PDDLAction;
 import fr.uga.pddl4j.parser.PDDLExpression;
 import fr.uga.pddl4j.parser.PDDLParser;
 import fr.uga.pddl4j.parser.PDDLTypedSymbol;
-import fsm.Pair;
-import learning.TypeHierarchy;
 
 /**
  * @author Maxence Grand

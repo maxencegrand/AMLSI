@@ -8,17 +8,15 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-import exception.PlanException;
-import fsm.Example;
-import fsm.Method;
-import fsm.Sample;
-import fsm.Symbol;
-import fsm.Task;
-import fsm.Trace;
-import learning.CompressedHierarchical;
-import learning.CompressedNegativeExample;
+import fr.uga.generator.exception.PlanException;
+import fr.uga.generator.symbols.Method;
+import fr.uga.generator.symbols.Symbol;
+import fr.uga.generator.symbols.trace.CompressedHierarchical;
+import fr.uga.generator.symbols.trace.CompressedNegativeExample;
+import fr.uga.generator.symbols.trace.Example;
+import fr.uga.generator.symbols.trace.Observation;
+import fr.uga.generator.symbols.trace.Sample;
 import learning.Domain;
-import learning.Observation;
 import simulator.DomainSimulator;
 
 /**

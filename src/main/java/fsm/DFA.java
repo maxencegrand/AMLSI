@@ -9,7 +9,17 @@ import java.io.BufferedWriter;
 import java.io.FileWriter;
 import java.io.IOException;
 import java.util.Queue;
-import exception.BlocException;
+
+import fr.uga.generator.exception.BlocException;
+import fr.uga.generator.symbols.Symbol;
+import fr.uga.generator.symbols.Task;
+import fr.uga.generator.symbols.trace.Example;
+import fr.uga.generator.symbols.trace.RandomTaskTrace;
+import fr.uga.generator.symbols.trace.Sample;
+import fr.uga.generator.symbols.trace.TaskTrace;
+import fr.uga.generator.symbols.trace.Trace;
+import fr.uga.generator.utils.Pair;
+import fr.uga.generator.symbols.Method;
 
 /**
  * This class represent a finite state automaton
@@ -997,7 +1007,7 @@ public class DFA{
 				}
 			}
 		}
-		throw new exception.BlocException();
+		throw new BlocException();
 	}
 
 	/**

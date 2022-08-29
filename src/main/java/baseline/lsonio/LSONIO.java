@@ -7,13 +7,11 @@ import java.util.List;
 import java.util.Map;
 import java.util.PriorityQueue;
 
-import fsm.Example;
-import fsm.Pair;
-import fsm.Sample;
-import fsm.Symbol;
+import fr.uga.generator.symbols.Symbol;
+import fr.uga.generator.symbols.trace.Sample;
+import fr.uga.generator.symbols.trace.*;
+import fr.uga.generator.utils.Pair;
 import learning.Domain;
-import learning.Observation;
-import learning.ObservedExample;
 
 /**
 * Implements the LSO-NIO approach

@@ -5,12 +5,20 @@ package main.experiment.hierarchical;
 
 import java.util.List;
 
-import exception.PlanException;
-import fsm.DecompositionTrace;
-import fsm.Sample;
-import fsm.Symbol;
-import fsm.Trace;
-import simulator.hierarchical.HtnSimulator;
+import fr.uga.generator.exception.BlocException;
+import fr.uga.generator.exception.PlanException;
+import fr.uga.generator.generator.Generator;
+import fr.uga.generator.simulator.Simulator;
+import fr.uga.generator.simulator.StripsSimulator;
+import fr.uga.generator.simulator.hierarchical.HtnSimulator;
+import fr.uga.generator.symbols.Symbol;
+import fr.uga.generator.symbols.trace.DecompositionTrace;
+import fr.uga.generator.symbols.trace.Example;
+import fr.uga.generator.symbols.trace.Observation;
+import fr.uga.generator.symbols.trace.ObservedExample;
+import fr.uga.generator.symbols.trace.Sample;
+import fr.uga.generator.symbols.trace.Trace;
+import fr.uga.generator.utils.Pair;
 
 /**
  * @author Maxence Grand

@@ -1,6 +1,9 @@
 package fsm;
 
 import java.util.List;
+
+import fr.uga.generator.symbols.Symbol;
+
 import java.util.ArrayList;
 /**
  * This class represent an alphabet used by an automata

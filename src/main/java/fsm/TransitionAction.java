@@ -8,6 +8,9 @@ import java.util.LinkedHashMap;
 import java.util.List;
 import java.util.Map;
 
+import fr.uga.generator.symbols.Action;
+import fr.uga.generator.symbols.Symbol;
+
 /**
  * @author Maxence Grand
  *

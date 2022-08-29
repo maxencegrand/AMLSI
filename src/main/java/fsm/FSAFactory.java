@@ -5,7 +5,13 @@ import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Queue;
 import java.util.LinkedList;
-import exception.BlocException;
+import fr.uga.generator.exception.BlocException;
+import fr.uga.generator.symbols.Action;
+import fr.uga.generator.symbols.Symbol;
+import fr.uga.generator.symbols.trace.Example;
+import fr.uga.generator.symbols.trace.Sample;
+import fr.uga.generator.symbols.trace.Trace;
+import fr.uga.generator.utils.Pair;
 
 /**
  * Factories of remarkable automaton

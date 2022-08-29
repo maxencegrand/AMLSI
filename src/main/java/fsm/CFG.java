@@ -12,6 +12,14 @@ import java.util.List;
 import java.util.Map;
 import java.util.PriorityQueue;
 
+import fr.uga.generator.symbols.Method;
+import fr.uga.generator.symbols.Symbol;
+import fr.uga.generator.symbols.trace.Example;
+import fr.uga.generator.symbols.trace.TaskTrace;
+import fr.uga.generator.symbols.trace.Trace;
+import fr.uga.generator.symbols.Task;
+import fr.uga.generator.symbols.Symbol;
+
 
 
 /**

@@ -5,9 +5,9 @@ package simulator;
 
 import java.util.List;
 
-import fsm.Symbol;
-import learning.Observation;
-import learning.Observation.Value;
+import fr.uga.generator.symbols.Symbol;
+import fr.uga.generator.symbols.trace.Observation;
+import fr.uga.generator.symbols.trace.Observation.Value;
 
 /**
  * @author Maxence Grand

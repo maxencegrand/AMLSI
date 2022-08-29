@@ -9,25 +9,26 @@ import java.util.LinkedHashMap;
 import java.util.List;
 import java.util.Map;
 import org.apache.logging.log4j.LogManager;
-import exception.BlocException;
-import exception.PlanException;
+
+import fr.uga.generator.exception.BlocException;
+import fr.uga.generator.exception.PlanException;
+import fr.uga.generator.generator.Generator;
+import fr.uga.generator.symbols.Action;
+import fr.uga.generator.symbols.Predicate;
+import fr.uga.generator.symbols.Symbol;
+import fr.uga.generator.symbols.TypeHierarchy;
+import fr.uga.generator.symbols.trace.Example;
+import fr.uga.generator.symbols.trace.Observation;
+import fr.uga.generator.symbols.trace.Sample;
+import fr.uga.generator.symbols.trace.Trace;
+import fr.uga.generator.utils.Pair;
 import fr.uga.pddl4j.parser.PDDLAction;
 import fr.uga.pddl4j.parser.PDDLDomain;
 import fr.uga.pddl4j.parser.PDDLExpression;
 import fr.uga.pddl4j.parser.PDDLNamedTypedList;
 import fr.uga.pddl4j.parser.PDDLParser;
 import fr.uga.pddl4j.parser.PDDLTypedSymbol;
-import fsm.Action;
-import fsm.Example;
-import fsm.Pair;
-import fsm.Predicate;
-import fsm.Sample;
-import fsm.Symbol;
-import fsm.Trace;
-import learning.Generator;
 import learning.Measure;
-import learning.Observation;
-import learning.TypeHierarchy;
 
 /**
  * Metrics use to test a learnt domain

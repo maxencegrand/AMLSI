@@ -10,12 +10,11 @@ import java.util.Map;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
-import fsm.Pair;
-import fsm.Symbol;
+import fr.uga.generator.symbols.Symbol;
 import learning.Domain;
 import learning.LocalSearch;
-import learning.Observation;
-
+import fr.uga.generator.symbols.trace.Observation;
+import fr.uga.generator.utils.Pair;
 /**
  * @author Maxence Grand
  *

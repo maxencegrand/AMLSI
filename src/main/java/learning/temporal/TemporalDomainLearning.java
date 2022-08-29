@@ -7,23 +7,24 @@ import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
-import exception.BlocException;
-import fsm.Example;
+
+import fr.uga.generator.exception.BlocException;
+import fr.uga.generator.generator.Generator;
+import fr.uga.generator.simulator.temporal.TemporalExample;
+import fr.uga.generator.symbols.Symbol;
+import fr.uga.generator.symbols.TypeHierarchy;
+import fr.uga.generator.symbols.trace.CompressedTemporalNegativeExample;
+import fr.uga.generator.symbols.trace.Example;
+import fr.uga.generator.symbols.trace.Observation;
+import fr.uga.generator.symbols.trace.Sample;
+import fr.uga.generator.symbols.trace.Trace;
+import fr.uga.generator.utils.Pair;
 import fsm.DFA;
-import fsm.Pair;
-import fsm.Sample;
-import fsm.Symbol;
-import fsm.Trace;
-import learning.CompressedNegativeExample;
 import learning.DomainLearning;
-import learning.Generator;
 import learning.Domain;
 import learning.DomainsQueue;
 import learning.Mapping;
-import learning.Observation;
-import learning.TypeHierarchy;
 import main.Argument;
-import simulator.temporal.TemporalExample;
 
 /**
  * @author Maxence Grand

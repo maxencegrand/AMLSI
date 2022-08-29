@@ -2,6 +2,16 @@ package learning;
 
 import java.util.List;
 import java.util.Map;
+
+import fr.uga.generator.exception.BlocException;
+import fr.uga.generator.generator.Generator;
+import fr.uga.generator.simulator.Oracle;
+import fr.uga.generator.symbols.Symbol;
+import fr.uga.generator.symbols.trace.Example;
+import fr.uga.generator.symbols.trace.Sample;
+import fr.uga.generator.symbols.trace.Trace;
+import fr.uga.generator.utils.Pair;
+
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.HashMap;
@@ -9,8 +19,6 @@ import java.util.LinkedHashMap;
 
 import fsm.*;
 import main.Argument;
-import exception.BlocException;
-import simulator.Oracle;
 
 /**
  * This class implements the automata learning module.

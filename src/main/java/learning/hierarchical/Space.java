@@ -5,8 +5,9 @@ package learning.hierarchical;
 
 import java.util.List;
 
-import fsm.Symbol;
-import learning.Observation;
+import fr.uga.generator.symbols.Symbol;
+import fr.uga.generator.symbols.trace.Observation;
+
 
 /**
  * @author Maxence Grand

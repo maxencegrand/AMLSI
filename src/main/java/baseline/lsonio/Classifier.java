@@ -5,8 +5,8 @@ import java.util.LinkedList;
 import java.util.List;
 import java.util.Map;
 
-import fsm.Pair;
-import fsm.Symbol;
+import fr.uga.generator.symbols.Symbol;
+import fr.uga.generator.utils.Pair;
 
 /**
  * This class implements Kernel voted perceptron used by the LSO-NIO approach

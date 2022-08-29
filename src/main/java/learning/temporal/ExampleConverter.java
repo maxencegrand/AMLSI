@@ -3,15 +3,16 @@
  */
 package learning.temporal;
 
-import fsm.Example;
-import fsm.Sample;
-import fsm.Symbol;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
-import simulator.temporal.TemporalOracle;
+
+import fr.uga.generator.simulator.temporal.TemporalOracle;
+import fr.uga.generator.symbols.Symbol;
+import fr.uga.generator.symbols.trace.Example;
+import fr.uga.generator.symbols.trace.Sample;
 
 /**
  * @author Maxence Grand

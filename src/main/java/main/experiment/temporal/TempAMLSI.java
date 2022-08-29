@@ -9,35 +9,34 @@ import java.io.IOException;
 import java.util.ArrayList;
 import java.util.HashMap;
 
-import fsm.Symbol;
-import fsm.Trace;
-import fsm.Sample;
-import fsm.Example;
 import fsm.DFA;
-import fsm.Pair;
 import fsm.Partition;
 import java.util.Random;
 import java.util.Scanner;
 
-import exception.BlocException;
+import fr.uga.generator.exception.BlocException;
+import fr.uga.generator.generator.Generator;
+import fr.uga.generator.generator.temporal.TemporalGenerator;
+import fr.uga.generator.simulator.Simulator;
+import fr.uga.generator.simulator.StripsSimulator;
+import fr.uga.generator.simulator.temporal.TemporalBlackBox;
+import fr.uga.generator.simulator.temporal.TemporalExample;
+import fr.uga.generator.simulator.temporal.TemporalOracle;
+import fr.uga.generator.symbols.Symbol;
+import fr.uga.generator.symbols.trace.Example;
+import fr.uga.generator.symbols.trace.Observation;
+import fr.uga.generator.symbols.trace.ObservedExample;
+import fr.uga.generator.symbols.trace.Sample;
+import fr.uga.generator.symbols.trace.Trace;
+import fr.uga.generator.utils.Pair;
 import learning.AutomataLearning;
-import learning.CompressedNegativeExample;
-import learning.Generator;
 import learning.LocalSearch;
 import learning.Domain;
 import learning.Mapping;
-import learning.Observation;
-import learning.ObservedExample;
 import main.Argument;
 import main.Properties;
 import main.experiment.TestMetrics;
-import simulator.Oracle;
-import simulator.Simulator;
-import simulator.temporal.TemporalBlackBox;
-import simulator.temporal.TemporalExample;
-import simulator.temporal.TemporalOracle;
 import learning.temporal.TemporalDomainLearning;
-import learning.temporal.TemporalGenerator;
 import learning.temporal.TemporalLocalSearch;
 import learning.temporal.TemporalDomain;
 import learning.temporal.translator.Translator;
@@ -124,7 +123,7 @@ public class TempAMLSI {
 			Pair<Sample, Sample> testSet = generatorTest.generate(
 					minLearn, sizeTest,	100, nbTest);
 			//Pair<Sample, Sample> testSet = new Pair<>(new Sample(), new Sample());
-			Simulator sim = new simulator.StripsSimulator("classical_"+Argument.getName()+".pddl",
+			Simulator sim = new StripsSimulator("classical_"+Argument.getName()+".pddl",
 					initialState);
 			
 			/*

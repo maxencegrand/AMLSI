@@ -7,6 +7,9 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
 
+import fr.uga.generator.symbols.Action;
+import fr.uga.generator.symbols.Symbol;
+
 /**
  * @author Maxence Grand
  *
@@ -30,7 +33,7 @@ public class TaggedAction extends Action{
 	 * @param tag
 	 */
 	public TaggedAction(Symbol s, List<String> tag) {
-		super(s.name,s.parameters, s.abstractParameters);
+		super(s.getName(),s.getParameters(), s.getAbstractParameters());
 		this.tag = tag;
 	}
 	

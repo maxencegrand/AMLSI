@@ -8,7 +8,15 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-import exception.PlanException;
+import fr.uga.generator.exception.PlanException;
+import fr.uga.generator.simulator.StripsSimulator;
+import fr.uga.generator.symbols.Symbol;
+import fr.uga.generator.symbols.trace.CompressedNegativeExample;
+import fr.uga.generator.symbols.trace.Example;
+import fr.uga.generator.symbols.trace.Observation;
+import fr.uga.generator.symbols.trace.ObservedExample;
+import fr.uga.generator.symbols.trace.Sample;
+import fr.uga.generator.symbols.trace.Trace;
 import fr.uga.pddl4j.planners.statespace.search.Node;
 import fr.uga.pddl4j.problem.Fluent;
 import fr.uga.pddl4j.problem.State;
@@ -16,15 +24,8 @@ import fr.uga.pddl4j.problem.operator.Action;
 import fr.uga.pddl4j.problem.operator.Condition;
 import fr.uga.pddl4j.problem.operator.Effect;
 import fr.uga.pddl4j.util.BitVector;
-import fsm.Example;
-import fsm.Pair;
-import fsm.Sample;
-import fsm.Symbol;
-import fsm.Trace;
-import learning.CompressedNegativeExample;
+import fr.uga.generator.utils.Pair;
 import learning.Domain;
-import learning.Observation;
-import learning.ObservedExample;
 
 /**
  * @author Maxence Grand
@@ -546,7 +547,7 @@ public class DomainSimulator extends StripsSimulator{
      * @param vector
      * @return
      */
-    protected List<fsm.Symbol> getPredicatesVector(BitVector vector) {
+    protected List<fr.uga.generator.symbols.Symbol> getPredicatesVector(BitVector vector) {
 		List<Symbol> res = new ArrayList<>();
 		for(int i = vector.nextSetBit(0); i >= 0; i = vector.nextSetBit(i+1)) {
 			//System.out.println(this.getInternalFluents().get(i));
