@@ -2,23 +2,23 @@ JAVAC=javac
 JAR=jar
 FLAGS=-Xlint:unchecked
 SRC_PATH=src/main/java/
-CLASSPATH=./lib/pddl4j-4.0.jar
-SRC=${wildcard ${SRC_PATH}baseline/*.java}  \
-    ${wildcard ${SRC_PATH}baseline/lsonio/*.java}  \
-    ${wildcard ${SRC_PATH}exceptions/*.java} \
-    ${wildcard ${SRC_PATH}fsm/*.java} \
-    ${wildcard ${SRC_PATH}simulator/*.java} \
-    ${wildcard ${SRC_PATH}simulator/hierarchical/*.java} \
-    ${wildcard ${SRC_PATH}learning/*.java} \
-    ${wildcard ${SRC_PATH}learning/hierarchical/*.java} \
-    ${wildcard ${SRC_PATH}learning/preprocess/*.java} \
-    ${wildcard ${SRC_PATH}temporal/*.java} \
-    ${wildcard ${SRC_PATH}main/*.java} \
-    ${wildcard ${SRC_PATH}learning/*.java} \
-    ${wildcard ${SRC_PATH}main/*.java} \
-    ${wildcard ${SRC_PATH}main/experiment/*.java}
+CLASSPATH=./lib/pddl4j-4.0.jar:./lib/PddlGenerator.jar
+SRC=${wildcard ${SRC_PATH}fr/uga/amlsi/baseline/*.java}  \
+    ${wildcard ${SRC_PATH}fr/uga/amlsi/baseline/lsonio/*.java}  \
+    ${wildcard ${SRC_PATH}fr/uga/amlsi/exceptions/*.java} \
+    ${wildcard ${SRC_PATH}fr/uga/amlsi/fsm/*.java} \
+    ${wildcard ${SRC_PATH}fr/uga/amlsi/learning/simulator/*.java} \
+    ${wildcard ${SRC_PATH}fr/uga/amlsi/learning/simulator/hierarchical/*.java} \
+    ${wildcard ${SRC_PATH}fr/uga/amlsi/learning/*.java} \
+    ${wildcard ${SRC_PATH}fr/uga/amlsi/learning/hierarchical/*.java} \
+    ${wildcard ${SRC_PATH}fr/uga/amlsi/learning/preprocess/*.java} \
+    ${wildcard ${SRC_PATH}fr/uga/amlsi/temporal/*.java} \
+    ${wildcard ${SRC_PATH}fr/uga/amlsi/main/*.java} \
+    ${wildcard ${SRC_PATH}fr/uga/amlsi/learning/*.java} \
+    ${wildcard ${SRC_PATH}fr/uga/amlsi/main/*.java} \
+    ${wildcard ${SRC_PATH}fr/uga/amlsi/main/experiment/*.java}
 
-PACKAGES=main main.experiment baseline baseline.lsonio fsm learning simulator temporal
+PACKAGES=fr.uga.amlsi.main fr.uga.amlsi.main.experiment fr.uga.amlsi.baseline fr.uga.amlsi.baseline.lsonio fr.uga.amlsi.fsm fr.uga.amlsi.learning fr.uga.amlsi.simulator fr.uga.amlsi.temporal
 #PACKAGES=main main.experiment baseline baseline.lsonio fsm learning learning.preprocess simulator
 CLASSES=${SRC:src/main/java/%.java=%.class}
 
