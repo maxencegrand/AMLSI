@@ -1,0 +1,32 @@
+(define (problem init-1)
+(:domain gripper)
+
+(:objects rooma roomb - room
+          ball1 ball2  - ball
+          l r - gripper)
+
+
+    (:htn
+        :tasks (and
+            (move_two_balls ball1 ball2 roomb)
+            (move_two_balls ball2 ball1 roomb)
+            (move_two_balls ball1 ball2 rooma)
+            (move_two_balls ball2 ball1 rooma)
+            (move_one_ball ball1 roomb)
+            (move_one_ball ball2 roomb)
+            (move_one_ball ball1 rooma)
+            (move_one_ball ball2 rooma)
+            (goto rooma)
+            (goto roomb)
+        )
+    )
+
+
+
+(:init (at-robby rooma)
+       (free r)
+       (free l)
+       (at ball1 rooma)
+       (at ball2 roomb)
+)
+)

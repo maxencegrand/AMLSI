@@ -1,0 +1,261 @@
+==>
+1 unstack b25 b19
+2 put-down b25
+4 unstack b19 b14
+5 put-down b19
+7 unstack b14 b30
+8 put-down b14
+10 unstack b30 b20
+11 put-down b30
+13 unstack b20 b9
+14 put-down b20
+16 unstack b9 b28
+17 put-down b9
+19 unstack b28 b7
+20 put-down b28
+22 unstack b7 b3
+23 put-down b7
+25 unstack b3 b26
+26 put-down b3
+28 unstack b26 b10
+29 put-down b26
+31 unstack b10 b15
+32 put-down b10
+34 unstack b15 b5
+35 put-down b15
+37 unstack b5 b6
+38 put-down b5
+40 unstack b6 b12
+41 put-down b6
+43 unstack b12 b21
+44 put-down b12
+46 unstack b21 b16
+47 put-down b21
+49 unstack b16 b22
+50 put-down b16
+52 unstack b22 b1
+53 put-down b22
+55 unstack b1 b13
+56 put-down b1
+58 unstack b4 b27
+59 put-down b4
+61 unstack b27 b18
+62 put-down b27
+64 unstack b18 b17
+65 put-down b18
+67 unstack b17 b8
+68 put-down b17
+70 unstack b8 b23
+71 put-down b8
+73 unstack b23 b29
+74 put-down b23
+76 unstack b29 b11
+77 put-down b29
+79 unstack b11 b24
+80 put-down b11
+82 unstack b24 b2
+83 put-down b24
+88 pick-up b14
+89 stack b14 b3
+94 pick-up b20
+95 stack b20 b14
+100 pick-up b25
+101 stack b25 b20
+106 pick-up b4
+107 stack b4 b25
+112 pick-up b1
+113 stack b1 b4
+118 pick-up b7
+119 stack b7 b1
+124 pick-up b17
+125 stack b17 b7
+130 pick-up b28
+131 stack b28 b17
+136 pick-up b10
+137 stack b10 b28
+142 pick-up b8
+143 stack b8 b10
+148 pick-up b15
+149 stack b15 b8
+154 pick-up b13
+155 stack b13 b15
+160 pick-up b6
+161 stack b6 b13
+166 pick-up b24
+167 stack b24 b6
+172 pick-up b19
+173 stack b19 b24
+178 pick-up b11
+179 stack b11 b19
+184 pick-up b5
+185 stack b5 b11
+190 pick-up b12
+191 stack b12 b5
+196 pick-up b16
+197 stack b16 b12
+202 pick-up b18
+203 stack b18 b16
+208 pick-up b26
+209 stack b26 b18
+214 pick-up b22
+215 stack b22 b26
+220 pick-up b23
+221 stack b23 b22
+226 pick-up b2
+227 stack b2 b23
+232 pick-up b27
+233 stack b27 b2
+238 pick-up b21
+239 stack b21 b27
+244 pick-up b30
+245 stack b30 b21
+250 pick-up b29
+251 stack b29 b30
+256 pick-up b9
+257 stack b9 b29
+root 0 3 6 9 12 15 18 21 24 27 30 33 36 39 42 45 48 51 54 57 60 63 66 69 72 75 78 81 84 90 96 102 108 114 120 126 132 138 144 150 156 162 168 174 180 186 192 198 204 210 216 222 228 234 240 246 252
+0 (do_on_table b25) -> m2_do_on_table 1 2
+3 (do_on_table b19) -> m2_do_on_table 4 5
+6 (do_on_table b14) -> m2_do_on_table 7 8
+9 (do_on_table b30) -> m2_do_on_table 10 11
+12 (do_on_table b20) -> m2_do_on_table 13 14
+15 (do_on_table b9) -> m2_do_on_table 16 17
+18 (do_on_table b28) -> m2_do_on_table 19 20
+21 (do_on_table b7) -> m2_do_on_table 22 23
+24 (do_on_table b3) -> m2_do_on_table 25 26
+27 (do_on_table b26) -> m2_do_on_table 28 29
+30 (do_on_table b10) -> m2_do_on_table 31 32
+33 (do_on_table b15) -> m2_do_on_table 34 35
+36 (do_on_table b5) -> m2_do_on_table 37 38
+39 (do_on_table b6) -> m2_do_on_table 40 41
+42 (do_on_table b12) -> m2_do_on_table 43 44
+45 (do_on_table b21) -> m2_do_on_table 46 47
+48 (do_on_table b16) -> m2_do_on_table 49 50
+51 (do_on_table b22) -> m2_do_on_table 52 53
+54 (do_on_table b1) -> m2_do_on_table 55 56
+57 (do_on_table b4) -> m2_do_on_table 58 59
+60 (do_on_table b27) -> m2_do_on_table 61 62
+63 (do_on_table b18) -> m2_do_on_table 64 65
+66 (do_on_table b17) -> m2_do_on_table 67 68
+69 (do_on_table b8) -> m2_do_on_table 70 71
+72 (do_on_table b23) -> m2_do_on_table 73 74
+75 (do_on_table b29) -> m2_do_on_table 76 77
+78 (do_on_table b11) -> m2_do_on_table 79 80
+81 (do_on_table b24) -> m2_do_on_table 82 83
+84 (do_put_on b14 b3) -> m1_do_put_on 85 86 87
+85 (do_clear b14) -> m6_do_clear
+86 (do_clear b3) -> m6_do_clear
+87 (do_move b14 b3) -> m4_do_move 88 89
+90 (do_put_on b20 b14) -> m1_do_put_on 91 92 93
+91 (do_clear b20) -> m6_do_clear
+92 (do_clear b14) -> m6_do_clear
+93 (do_move b20 b14) -> m4_do_move 94 95
+96 (do_put_on b25 b20) -> m1_do_put_on 97 98 99
+97 (do_clear b25) -> m6_do_clear
+98 (do_clear b20) -> m6_do_clear
+99 (do_move b25 b20) -> m4_do_move 100 101
+102 (do_put_on b4 b25) -> m1_do_put_on 103 104 105
+103 (do_clear b4) -> m6_do_clear
+104 (do_clear b25) -> m6_do_clear
+105 (do_move b4 b25) -> m4_do_move 106 107
+108 (do_put_on b1 b4) -> m1_do_put_on 109 110 111
+109 (do_clear b1) -> m6_do_clear
+110 (do_clear b4) -> m6_do_clear
+111 (do_move b1 b4) -> m4_do_move 112 113
+114 (do_put_on b7 b1) -> m1_do_put_on 115 116 117
+115 (do_clear b7) -> m6_do_clear
+116 (do_clear b1) -> m6_do_clear
+117 (do_move b7 b1) -> m4_do_move 118 119
+120 (do_put_on b17 b7) -> m1_do_put_on 121 122 123
+121 (do_clear b17) -> m6_do_clear
+122 (do_clear b7) -> m6_do_clear
+123 (do_move b17 b7) -> m4_do_move 124 125
+126 (do_put_on b28 b17) -> m1_do_put_on 127 128 129
+127 (do_clear b28) -> m6_do_clear
+128 (do_clear b17) -> m6_do_clear
+129 (do_move b28 b17) -> m4_do_move 130 131
+132 (do_put_on b10 b28) -> m1_do_put_on 133 134 135
+133 (do_clear b10) -> m6_do_clear
+134 (do_clear b28) -> m6_do_clear
+135 (do_move b10 b28) -> m4_do_move 136 137
+138 (do_put_on b8 b10) -> m1_do_put_on 139 140 141
+139 (do_clear b8) -> m6_do_clear
+140 (do_clear b10) -> m6_do_clear
+141 (do_move b8 b10) -> m4_do_move 142 143
+144 (do_put_on b15 b8) -> m1_do_put_on 145 146 147
+145 (do_clear b15) -> m6_do_clear
+146 (do_clear b8) -> m6_do_clear
+147 (do_move b15 b8) -> m4_do_move 148 149
+150 (do_put_on b13 b15) -> m1_do_put_on 151 152 153
+151 (do_clear b13) -> m6_do_clear
+152 (do_clear b15) -> m6_do_clear
+153 (do_move b13 b15) -> m4_do_move 154 155
+156 (do_put_on b6 b13) -> m1_do_put_on 157 158 159
+157 (do_clear b6) -> m6_do_clear
+158 (do_clear b13) -> m6_do_clear
+159 (do_move b6 b13) -> m4_do_move 160 161
+162 (do_put_on b24 b6) -> m1_do_put_on 163 164 165
+163 (do_clear b24) -> m6_do_clear
+164 (do_clear b6) -> m6_do_clear
+165 (do_move b24 b6) -> m4_do_move 166 167
+168 (do_put_on b19 b24) -> m1_do_put_on 169 170 171
+169 (do_clear b19) -> m6_do_clear
+170 (do_clear b24) -> m6_do_clear
+171 (do_move b19 b24) -> m4_do_move 172 173
+174 (do_put_on b11 b19) -> m1_do_put_on 175 176 177
+175 (do_clear b11) -> m6_do_clear
+176 (do_clear b19) -> m6_do_clear
+177 (do_move b11 b19) -> m4_do_move 178 179
+180 (do_put_on b5 b11) -> m1_do_put_on 181 182 183
+181 (do_clear b5) -> m6_do_clear
+182 (do_clear b11) -> m6_do_clear
+183 (do_move b5 b11) -> m4_do_move 184 185
+186 (do_put_on b12 b5) -> m1_do_put_on 187 188 189
+187 (do_clear b12) -> m6_do_clear
+188 (do_clear b5) -> m6_do_clear
+189 (do_move b12 b5) -> m4_do_move 190 191
+192 (do_put_on b16 b12) -> m1_do_put_on 193 194 195
+193 (do_clear b16) -> m6_do_clear
+194 (do_clear b12) -> m6_do_clear
+195 (do_move b16 b12) -> m4_do_move 196 197
+198 (do_put_on b18 b16) -> m1_do_put_on 199 200 201
+199 (do_clear b18) -> m6_do_clear
+200 (do_clear b16) -> m6_do_clear
+201 (do_move b18 b16) -> m4_do_move 202 203
+204 (do_put_on b26 b18) -> m1_do_put_on 205 206 207
+205 (do_clear b26) -> m6_do_clear
+206 (do_clear b18) -> m6_do_clear
+207 (do_move b26 b18) -> m4_do_move 208 209
+210 (do_put_on b22 b26) -> m1_do_put_on 211 212 213
+211 (do_clear b22) -> m6_do_clear
+212 (do_clear b26) -> m6_do_clear
+213 (do_move b22 b26) -> m4_do_move 214 215
+216 (do_put_on b23 b22) -> m1_do_put_on 217 218 219
+217 (do_clear b23) -> m6_do_clear
+218 (do_clear b22) -> m6_do_clear
+219 (do_move b23 b22) -> m4_do_move 220 221
+222 (do_put_on b2 b23) -> m1_do_put_on 223 224 225
+223 (do_clear b2) -> m6_do_clear
+224 (do_clear b23) -> m6_do_clear
+225 (do_move b2 b23) -> m4_do_move 226 227
+228 (do_put_on b27 b2) -> m1_do_put_on 229 230 231
+229 (do_clear b27) -> m6_do_clear
+230 (do_clear b2) -> m6_do_clear
+231 (do_move b27 b2) -> m4_do_move 232 233
+234 (do_put_on b21 b27) -> m1_do_put_on 235 236 237
+235 (do_clear b21) -> m6_do_clear
+236 (do_clear b27) -> m6_do_clear
+237 (do_move b21 b27) -> m4_do_move 238 239
+240 (do_put_on b30 b21) -> m1_do_put_on 241 242 243
+241 (do_clear b30) -> m6_do_clear
+242 (do_clear b21) -> m6_do_clear
+243 (do_move b30 b21) -> m4_do_move 244 245
+246 (do_put_on b29 b30) -> m1_do_put_on 247 248 249
+247 (do_clear b29) -> m6_do_clear
+248 (do_clear b30) -> m6_do_clear
+249 (do_move b29 b30) -> m4_do_move 250 251
+252 (do_put_on b9 b29) -> m1_do_put_on 253 254 255
+253 (do_clear b9) -> m6_do_clear
+254 (do_clear b29) -> m6_do_clear
+255 (do_move b9 b29) -> m4_do_move 256 257
+<==

@@ -1,0 +1,45 @@
+==>
+1 make_sandwich_no_gluten sand4 bread2 content1
+2 put_on_tray sand4 tray1 kitchen
+3 move_tray tray1 kitchen table1
+4 serve_sandwich_no_gluten sand4 child1 tray1 table1
+5 move_tray tray1 table1 kitchen
+7 make_sandwich_no_gluten sand7 bread3 content3
+8 put_on_tray sand7 tray1 kitchen
+9 move_tray tray1 kitchen table1
+10 serve_sandwich_no_gluten sand7 child2 tray1 table1
+11 move_tray tray1 table1 kitchen
+13 make_sandwich_no_gluten sand3 bread1 content2
+14 put_on_tray sand3 tray1 kitchen
+15 move_tray tray1 kitchen table1
+16 serve_sandwich_no_gluten sand3 child3 tray1 table1
+17 move_tray tray1 table1 kitchen
+19 make_sandwich sand6 bread7 content6
+20 put_on_tray sand6 tray1 kitchen
+21 move_tray tray1 kitchen table1
+22 serve_sandwich sand6 child4 tray1 table1
+23 move_tray tray1 table1 kitchen
+25 make_sandwich sand5 bread6 content7
+26 put_on_tray sand5 tray1 kitchen
+27 move_tray tray1 kitchen table1
+28 serve_sandwich sand5 child5 tray1 table1
+29 move_tray tray1 table1 kitchen
+31 make_sandwich sand1 bread4 content4
+32 put_on_tray sand1 tray1 kitchen
+33 move_tray tray1 kitchen table1
+34 serve_sandwich sand1 child6 tray1 table1
+35 move_tray tray1 table1 kitchen
+37 make_sandwich sand2 bread5 content5
+38 put_on_tray sand2 tray1 kitchen
+39 move_tray tray1 kitchen table1
+40 serve_sandwich sand2 child7 tray1 table1
+41 move_tray tray1 table1 kitchen
+root 0 6 12 18 24 30 36
+0 (serve child1) -> serve_0 1 2 3 4 5
+6 (serve child2) -> serve_0 7 8 9 10 11
+12 (serve child3) -> serve_0 13 14 15 16 17
+18 (serve child4) -> serve_1 19 20 21 22 23
+24 (serve child5) -> serve_1 25 26 27 28 29
+30 (serve child6) -> serve_1 31 32 33 34 35
+36 (serve child7) -> serve_1 37 38 39 40 41
+<==

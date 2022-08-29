@@ -1,0 +1,84 @@
+(define (domain matchcellar)
+(:requirements :strips :typing :negative-preconditions)
+(:types 
+fuse match - object
+)(:predicates
+	(handfree)
+	(unused ?match - MATCH)
+	(mended ?fuse - FUSE)
+	(light ?match - MATCH)
+	(light_match-inv ?match - MATCH)
+	(ilight_match-inv ?match - MATCH)
+	(mend_fuse-inv ?fuse - FUSE ?match - MATCH)
+	(imend_fuse-inv ?fuse - FUSE ?match - MATCH)
+)
+(:action light_match-start
+	:parameters ( ?match - MATCH )
+	:precondition (and
+		(unused ?match)
+	)
+	:effect (and
+		(not (unused ?match))
+		(light ?match)
+		(light_match-inv ?match)
+	)
+)
+(:action light_match-end
+	:parameters ( ?match - MATCH )
+	:precondition (and
+		(light_match-inv ?match)
+		(ilight_match-inv ?match)
+	)
+	:effect (and
+		(not (light ?match))
+		(not (light_match-inv ?match))
+		(not (ilight_match-inv ?match))
+	)
+)
+(:action light_match-inv
+	:parameters ( ?match - MATCH )
+	:precondition (and
+		(light_match-inv ?match)
+	)
+	:effect (and
+		(light_match-inv ?match)
+		(ilight_match-inv ?match)
+	)
+)
+(:action mend_fuse-start
+	:parameters ( ?fuse - FUSE ?match - MATCH )
+	:precondition (and
+		(handfree)
+		(light ?match)
+	)
+	:effect (and
+		(not (handfree))
+		(mend_fuse-inv ?fuse ?match)
+	)
+)
+(:action mend_fuse-end
+	:parameters ( ?fuse - FUSE ?match - MATCH )
+	:precondition (and
+		(light ?match)
+		(mend_fuse-inv ?fuse ?match)
+		(imend_fuse-inv ?fuse ?match)
+	)
+	:effect (and
+		(mended ?fuse)
+		(handfree)
+		(not (mend_fuse-inv ?fuse ?match))
+		(not (imend_fuse-inv ?fuse ?match))
+	)
+)
+(:action mend_fuse-inv
+	:parameters ( ?fuse - FUSE ?match - MATCH )
+	:precondition (and
+		(light ?match)
+		(mend_fuse-inv ?fuse ?match)
+	)
+	:effect (and
+		(mend_fuse-inv ?fuse ?match)
+		(imend_fuse-inv ?fuse ?match)
+	)
+)
+)

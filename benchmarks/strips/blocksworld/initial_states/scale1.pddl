@@ -1,0 +1,6 @@
+(define (problem ei1)
+(:domain BLOCKS)
+(:objects A B - block )
+(:INIT (CLEAR B ) (ONTABLE A) (ON B A) (HANDEMPTY) )
+(:goal ( ) )
+)

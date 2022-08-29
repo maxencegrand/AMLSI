@@ -1,0 +1,6 @@
+(define (problem BLOCKS-4-0)
+(:domain blocksworld)
+(:objects D B A C - block right left - hand)
+(:INIT (CLEAR C) (CLEAR A) (CLEAR B) (CLEAR D) (ONTABLE C) (ONTABLE A) (ONTABLE B) (ONTABLE D) (HANDEMPTY right) (HANDEMPTY left) )
+(:goal (AND (ON D C) (ON C B) (ON B A)) )
+)

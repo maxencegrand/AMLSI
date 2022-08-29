@@ -1,0 +1,42 @@
+(define
+	(problem zenotravel01)
+	(:domain  zenotravel)
+	(:objects
+		c1 - City
+		c2 - City
+		a1 - Aircraft
+		p1 - Person
+		f0 - FLevel
+		f2 - FLevel
+		f1 - FLevel
+	)
+	(:htn
+		:subtasks (and
+
+		 (transport-person p1 c1)
+ 		 (transport-person p1 c2)
+
+		 (transport-aircraft a1 c1)
+		 (transport-aircraft a1 c2)
+
+		)
+
+	)
+	(:init
+		(next f0 f1)
+		(next f1 f2)
+        (max f2)
+        (min f0)
+        (not-min f1)
+        (not-min f2)
+		(at a1 c1)
+		(at p1 c1)
+		(fuel-level a1 f1)
+	)
+	(:goal
+		(and
+		(at p1 c1)
+		(at a1 c2)
+		)
+	)
+)

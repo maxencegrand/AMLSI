@@ -1,0 +1,6 @@
+0: (fly a1 c4 c7 f2 f1) [0]
+1: (    board p1 a1 c7) [0]
+2: (fly a1 c7 c5 f1 f0) [0]
+3: (   debark p1 a1 c5) [0]
+4: (   refuel a1 f0 f2) [0]
+5: (fly a1 c5 c4 f2 f1) [0]

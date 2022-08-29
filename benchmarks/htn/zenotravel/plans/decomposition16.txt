@@ -1,0 +1,14 @@
+==>
+root 0 1 2 3 4 5 6 7 8 9 10
+0 (transport-person p1 c1) -> m0-ordering-0
+1 (transport-person p2 c1) -> m0-ordering-0
+2 (transport-person p3 c1) -> m0-ordering-0
+3 (transport-person p4 c1) -> m0-ordering-0
+4 (transport-person p5 c1) -> m0-ordering-0
+5 (transport-person p6 c1) -> m0-ordering-0
+6 (transport-person p7 c1) -> m0-ordering-0
+7 (transport-person p8 c1) -> m0-ordering-0
+8 (transport-aircraft a1 c1) -> m2-abort-ordering-0
+9 (transport-aircraft a2 c1) -> m2-abort-ordering-0
+10 (transport-aircraft a3 c1) -> m2-abort-ordering-0
+<==

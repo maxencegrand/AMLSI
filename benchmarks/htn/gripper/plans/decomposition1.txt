@@ -1,0 +1,26 @@
+==>
+2 pick ball1 rooma left
+3 pick ball2 rooma right
+4 move rooma roomb
+5 drop ball1 roomb left
+6 drop ball2 roomb right
+9 move roomb rooma
+10 pick ball3 rooma left
+11 pick ball4 rooma right
+12 move rooma roomb
+13 drop ball3 roomb left
+14 drop ball4 roomb right
+17 move roomb rooma
+18 pick ball5 rooma right
+19 pick ball6 rooma left
+20 move rooma roomb
+21 drop ball5 roomb right
+22 drop ball6 roomb left
+root 0 7 15
+0 (move_two_balls ball1 ball2 roomb) -> move_two_balls_0 1 2 3 4 5 6
+1 (goto rooma) -> goto_0
+7 (move_two_balls ball3 ball4 roomb) -> move_two_balls_0 8 10 11 12 13 14
+8 (goto rooma) -> goto_1 9
+15 (move_two_balls ball5 ball6 roomb) -> move_two_balls_0 16 18 19 20 21 22
+16 (goto rooma) -> goto_1 17
+<==

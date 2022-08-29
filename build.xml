@@ -1,0 +1,71 @@
+
+<project default="test">
+  
+  <property name="src.dir" value="./src/main/java"/>
+  <property name="bin.dir" value="./bin"/>
+  <property name="lib.dir" value="./lib"/>
+  <property name="jar.dir" value="./build"/>
+  <property name="jar.file" value="${jar.dir}/AMLSI.jar"/>
+  <property name="main" value="main.experiment.AMLSI"/>
+  <property name="doc.dir" value ="./javadoc"/>
+  
+  <path id="projet.classpath">
+    <fileset dir="${lib.dir}">
+      <include name="*.jar"/>
+    </fileset>
+    <pathelement location="${bin.dir}" />
+  </path>
+  
+  <target name="init" depends="clean">
+    <mkdir dir="${jar.dir}"/>
+    <mkdir dir="${bin.dir}"/>
+    <mkdir dir="${doc.dir}"/>
+  </target>
+  
+  <target name="clean">
+    <delete dir="${jar.dir}"/>
+    <delete dir="${bin.dir}"/>
+  </target>
+
+  <target name="compile" depends="init">
+    <javac srcdir="${src.dir}"
+           destdir="${bin.dir}"
+           debug="on"
+           optimize="off"
+           deprecation="on"
+	   includeantruntime="false">
+      <classpath refid="projet.classpath"/>
+      <compilerarg value="-Xlint:unchecked"/>
+    </javac>
+  </target>
+
+  <target name="build" depends="compile">
+    <pathconvert property="mf.classpath" pathsep=" ">
+      <path refid="projet.classpath" />
+      <flattenmapper />
+    </pathconvert>
+    <!-- now build the manifest file, using mf.classpath -->
+    <tstamp/><!-- needed for TODAY -->
+    <manifest file="MANIFEST.MF">
+      <attribute name="Main-Class" value="${main}"/>
+      <attribute name="Class-Path" value="${mf.classpath}" />
+    </manifest>
+
+    <!-- create the jar file, including the manifest file we just created -->
+    <jar basedir="${bin.dir}"
+         destfile="${jar.file}"
+         includes="**/*.*"
+         excludes="**/*Test*"
+         manifest="MANIFEST.MF" />
+  </target>
+
+  <target name="doc" depends="init" description="generate documentation">
+    <javadoc sourcepath="${src.dir}" destdir="${doc.dir}">
+      <classpath>
+      <fileset dir="${lib.dir}">
+        <include name="**" />
+      </fileset>
+      </classpath>
+    </javadoc>
+  </target>
+</project>

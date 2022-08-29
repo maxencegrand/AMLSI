@@ -1,0 +1,57 @@
+#!/usr/bin/env python3
+# -*- coding: utf-8 -*-
+
+import os, sys, shutil
+
+#Constants
+PROG="./temporal-planning/bin/plan.py she"
+VAL="./VAL/validate -t 0.0001 -v"
+
+#Test for one domain
+def test_domain(reference, domain_to_test, domain, file_problems):
+    problem=""
+    N_PROBLEM=0
+    N_SOLVED=0
+    N_CORRECTLY_SOLVED=0
+    for problem in range(1,2):
+        problem = problem[:len(problem)-1]
+        N_PROBLEM += 1        
+        command = ("%s %s %s pddl/temporal/%s/instances/instance-%d.pddl") % (PROG,reference,domain_to_test,domain,problem)
+        code_return = os.system(command)
+        if(code_return == 0):
+            N_SOLVED += 1
+            code_return = os.system("%s %s %s tmp_sas_plan.1 > /dev/null 2> /dev/null" % (VAL, reference, problem, domain))
+        if(code_return == 0):
+            N_CORRECTLY_SOLVED += 1
+    return [ N_PROBLEM, N_SOLVED, N_CORRECTLY_SOLVED ]
+    
+    
+#Test all domains
+def test(domain, base_dir):
+    domain_rep="pddl/%s" % domain
+    reference="%s/domain.pddl" % domain_rep
+    
+    f = open("%s/%s/planning_results.txt" % (base_dir, domain), "w")
+    for initial in [1]:
+        f.write("Initial states %d\n" % initial)
+        for run in [0]:
+            f.write("run %d\n" % run)
+            for partial in [10]:
+                f.write("### Fluent = %d ###\n\n" % partial)
+                for noise in [0,1,2,5]:
+                    f.write("### Noise = %d ###\n\n" % noise)
+                    domain_to_test=("%s/%s/IS%d/amlsi_rpnir.%d.0.%d.pddl " % (base_dir, domain, initial, partial, noise, run))
+                    print(domain_to_test)
+                    [ N_PROBLEM, N_SOLVED, N_CORRECTLY_SOLVED ] = test_domain(reference, domain_to_test, domain)
+                    f.write("%d problems\n" % N_PROBLEM)
+                    f.write("%d solved problems\n" % N_SOLVED)
+                    f.write("%d correctly solved problems\n" % N_CORRECTLY_SOLVED)
+    f.close()
+                
+def main():
+    print("Begin test")
+    test(sys.argv[1], sys.argv[2])
+
+if __name__ == "__main__":
+    main()
+ 

@@ -1,0 +1,72 @@
+==>
+2 board p1 a2 c2
+4 fly a2 c2 c3 f2 f1
+5 debark p1 a2 c3
+8 fly a1 c1 c2 f2 f1
+9 board p2 a1 c2
+11 fly a1 c2 c1 f1 f0
+12 debark p2 a1 c1
+15 fly a2 c3 c2 f1 f0
+16 board p3 a2 c2
+18 refuel a2 f0 f2
+20 fly a2 c2 c1 f2 f1
+21 debark p3 a2 c1
+24 fly a2 c1 c3 f1 f0
+25 board p4 a2 c3
+27 refuel a2 f0 f2
+29 fly a2 c3 c1 f2 f1
+30 debark p4 a2 c1
+33 fly a2 c1 c3 f1 f0
+34 board p5 a2 c3
+36 refuel a2 f0 f2
+38 fly a2 c3 c2 f2 f1
+39 debark p5 a2 c2
+43 board p7 a1 c1
+45 refuel a1 f0 f2
+47 fly a1 c1 c2 f2 f1
+48 debark p7 a1 c2
+51 fly a1 c2 c3 f1 f0
+52 board p8 a1 c3
+54 refuel a1 f0 f2
+56 fly a1 c3 c2 f2 f1
+57 debark p8 a1 c2
+60 board p9 a1 c2
+62 fly a1 c2 c3 f1 f0
+63 debark p9 a1 c3
+65 refuel a1 f0 f2
+67 fly a1 c3 c1 f2 f1
+root 0 6 13 22 31 40 41 49 58 64 68
+0 (transport-person p1 c3) -> m1-ordering-0 1 2 3 5
+1 (transport-aircraft a2 c2) -> m2-abort-ordering-0
+3 (transport-aircraft a2 c3) -> m3-do-ordering-0 4
+6 (transport-person p2 c1) -> m1-ordering-0 7 9 10 12
+7 (transport-aircraft a1 c2) -> m3-do-ordering-0 8
+10 (transport-aircraft a1 c1) -> m3-do-ordering-0 11
+13 (transport-person p3 c1) -> m1-ordering-0 14 16 17 21
+14 (transport-aircraft a2 c2) -> m3-do-ordering-0 15
+17 (transport-aircraft a2 c1) -> m4-do-ordering-0 18 19
+19 (transport-aircraft a2 c1) -> m3-do-ordering-0 20
+22 (transport-person p4 c1) -> m1-ordering-0 23 25 26 30
+23 (transport-aircraft a2 c3) -> m3-do-ordering-0 24
+26 (transport-aircraft a2 c1) -> m4-do-ordering-0 27 28
+28 (transport-aircraft a2 c1) -> m3-do-ordering-0 29
+31 (transport-person p5 c2) -> m1-ordering-0 32 34 35 39
+32 (transport-aircraft a2 c3) -> m3-do-ordering-0 33
+35 (transport-aircraft a2 c2) -> m4-do-ordering-0 36 37
+37 (transport-aircraft a2 c2) -> m3-do-ordering-0 38
+40 (transport-person p6 c1) -> m0-ordering-0
+41 (transport-person p7 c2) -> m1-ordering-0 42 43 44 48
+42 (transport-aircraft a1 c1) -> m2-abort-ordering-0
+44 (transport-aircraft a1 c2) -> m4-do-ordering-0 45 46
+46 (transport-aircraft a1 c2) -> m3-do-ordering-0 47
+49 (transport-person p8 c2) -> m1-ordering-0 50 52 53 57
+50 (transport-aircraft a1 c3) -> m3-do-ordering-0 51
+53 (transport-aircraft a1 c2) -> m4-do-ordering-0 54 55
+55 (transport-aircraft a1 c2) -> m3-do-ordering-0 56
+58 (transport-person p9 c3) -> m1-ordering-0 59 60 61 63
+59 (transport-aircraft a1 c2) -> m2-abort-ordering-0
+61 (transport-aircraft a1 c3) -> m3-do-ordering-0 62
+64 (transport-aircraft a1 c1) -> m4-do-ordering-0 65 66
+66 (transport-aircraft a1 c1) -> m3-do-ordering-0 67
+68 (transport-aircraft a2 c2) -> m2-abort-ordering-0
+<==

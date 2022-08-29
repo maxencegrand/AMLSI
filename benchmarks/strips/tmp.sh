@@ -1,0 +1,23 @@
+mkdir $1/ref_max
+cp ../../../thesis_experiment/experiment/strips/ablation/$1/Base+PS+Tabu/Size_30_40/IS1/domain.100.0.0.pddl $1/ref_max/domain.pddl
+cp ../../../thesis_experiment/experiment/strips/ablation/$1/Base+PS+Tabu/Size_30_40/IS1/plans/NOISE0/OBS100/REP0/plan_1 $1/ref_max/
+cp ../../../thesis_experiment/experiment/strips/ablation/$1/Base+PS+Tabu/Size_30_40/IS1/plans/NOISE0/OBS100/REP0/plan_1 $1/ref_max/
+cp ../../../thesis_experiment/experiment/strips/ablation/$1/Base+PS+Tabu/Size_30_40/IS1/plans/NOISE0/OBS100/REP0/plan_2 $1/ref_max/
+cp ../../../thesis_experiment/experiment/strips/ablation/$1/Base+PS+Tabu/Size_30_40/IS1/plans/NOISE0/OBS100/REP0/plan_3 $1/ref_max/
+cp ../../../thesis_experiment/experiment/strips/ablation/$1/Base+PS+Tabu/Size_30_40/IS1/plans/NOISE0/OBS100/REP0/plan_4 $1/ref_max/
+cp ../../../thesis_experiment/experiment/strips/ablation/$1/Base+PS+Tabu/Size_30_40/IS1/plans/NOISE0/OBS100/REP0/plan_5 $1/ref_max/
+cp ../../../thesis_experiment/experiment/strips/ablation/$1/Base+PS+Tabu/Size_30_40/IS1/plans/NOISE0/OBS100/REP0/plan_6 $1/ref_max/
+cp ../../../thesis_experiment/experiment/strips/ablation/$1/Base+PS+Tabu/Size_30_40/IS1/plans/NOISE0/OBS100/REP0/plan_7 $1/ref_max/
+cp ../../../thesis_experiment/experiment/strips/ablation/$1/Base+PS+Tabu/Size_30_40/IS1/plans/NOISE0/OBS100/REP0/plan_8 $1/ref_max/
+cp ../../../thesis_experiment/experiment/strips/ablation/$1/Base+PS+Tabu/Size_30_40/IS1/plans/NOISE0/OBS100/REP0/plan_9 $1/ref_max/
+cp ../../../thesis_experiment/experiment/strips/ablation/$1/Base+PS+Tabu/Size_30_40/IS1/plans/NOISE0/OBS100/REP0/plan_10 $1/ref_max/
+cp ../../../thesis_experiment/experiment/strips/ablation/$1/Base+PS+Tabu/Size_30_40/IS1/plans/NOISE0/OBS100/REP0/plan_11 $1/ref_max/
+cp ../../../thesis_experiment/experiment/strips/ablation/$1/Base+PS+Tabu/Size_30_40/IS1/plans/NOISE0/OBS100/REP0/plan_12 $1/ref_max/
+cp ../../../thesis_experiment/experiment/strips/ablation/$1/Base+PS+Tabu/Size_30_40/IS1/plans/NOISE0/OBS100/REP0/plan_13 $1/ref_max/
+cp ../../../thesis_experiment/experiment/strips/ablation/$1/Base+PS+Tabu/Size_30_40/IS1/plans/NOISE0/OBS100/REP0/plan_14 $1/ref_max/
+cp ../../../thesis_experiment/experiment/strips/ablation/$1/Base+PS+Tabu/Size_30_40/IS1/plans/NOISE0/OBS100/REP0/plan_15 $1/ref_max/
+cp ../../../thesis_experiment/experiment/strips/ablation/$1/Base+PS+Tabu/Size_30_40/IS1/plans/NOISE0/OBS100/REP0/plan_16 $1/ref_max/
+cp ../../../thesis_experiment/experiment/strips/ablation/$1/Base+PS+Tabu/Size_30_40/IS1/plans/NOISE0/OBS100/REP0/plan_17 $1/ref_max/
+cp ../../../thesis_experiment/experiment/strips/ablation/$1/Base+PS+Tabu/Size_30_40/IS1/plans/NOISE0/OBS100/REP0/plan_18 $1/ref_max/
+cp ../../../thesis_experiment/experiment/strips/ablation/$1/Base+PS+Tabu/Size_30_40/IS1/plans/NOISE0/OBS100/REP0/plan_19 $1/ref_max/
+cp ../../../thesis_experiment/experiment/strips/ablation/$1/Base+PS+Tabu/Size_30_40/IS1/plans/NOISE0/OBS100/REP0/plan_20 $1/ref_max/

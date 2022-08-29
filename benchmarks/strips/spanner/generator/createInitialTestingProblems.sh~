@@ -1,0 +1,7 @@
+
+# ./spanner-generator.py num_spanners num_nuts num_locations
+./spanner-generator.py 143 145  93
+./spanner-generator.py 159 155 106
+./spanner-generator.py 150 150 103
+./spanner-generator.py 132 135  85
+./spanner-generator.py 130   3  49

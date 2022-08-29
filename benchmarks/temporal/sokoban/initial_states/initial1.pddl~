@@ -1,0 +1,51 @@
+(define (problem initial1)
+(:domain sokoban-typed)
+(:objects 
+        down right left up - direction
+        box0 - stone
+        f0-0f f0-1f f0-2f f0-3f - location
+        f1-0f f1-1f f1-2f f1-3f - location
+	player - player
+)
+(:init
+(move-dir f0-0f f0-1f right)
+(move-dir f0-0f f1-0f down)
+
+(move-dir f0-1f f0-0f left)
+(move-dir f0-1f f1-1f down)
+(move-dir f0-1f f0-2f right)
+
+(move-dir f0-2f f0-1f left)
+(move-dir f0-2f f1-2f down)
+(move-dir f0-2f f0-3f right)
+
+(move-dir f0-3f f0-2f left)
+(move-dir f0-3f f1-3f down)
+
+(move-dir f1-0f f0-0f up)
+(move-dir f1-0f f1-1f right)
+
+(move-dir f1-1f f1-0f left)
+(move-dir f1-1f f1-2f right)
+(move-dir f1-1f f0-1f up)
+
+(move-dir f1-2f f1-1f left)
+(move-dir f1-2f f1-3f right)
+(move-dir f1-2f f0-2f up)
+
+(move-dir f1-3f f1-2f left)
+(move-dir f1-3f f0-3f up)
+
+(at box0 f1-1f) 
+
+(at-robot f0-0f) 
+
+(clear f0-0f)
+(clear f1-0f)
+(clear f1-2f)
+(clear f1-3f)
+)
+(:goal
+()
+)
+)
