@@ -1,4 +1,0 @@
-Reference accuracy Cushing
-20 problems
-20 solved problems
-20 correctly solved problems

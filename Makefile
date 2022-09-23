@@ -37,10 +37,10 @@ compile: init
 build: compile
 	@echo "Build"
 	@touch MANIFEST.MF
-	@echo "Main-Class: main.Run" > MANIFEST.MF
-	@echo "Class-Path: ${CLASSPATH} classes" >> MANIFEST.MF
+	@echo "Main-Class: fr.uga.amlsi.main.Run" > MANIFEST.MF
+	@echo "Class-Path: ./lib/pddl4j-4.0.jar ./lib/PddlGenerator.jar classes" >> MANIFEST.MF
 	@mkdir ./build/lib
-	@cp -r ./lib/*.jar ./build/lib
+	@cp -r ./lib/*.jar ./build/lib/
 	@${JAR} cvfm build/amlsi.jar MANIFEST.MF -C build/classes .
 
 javadoc: build
