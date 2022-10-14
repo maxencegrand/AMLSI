@@ -11,9 +11,32 @@ For a question of memory space, the log files (~50Gb) are not present on this gi
 	cd loger/tikz/strips/ablation
 	python3 tex_generator.py 
 	make
-	
-<object data="./loger/graph/strips/ablation/Distance_blocksworld.pdf" type="application/pdf" width="700px" height="700px">
-    <embed src="./loger/graph/strips/ablation/Distance_blocksworld.pdf">
-        <p>This browser does not support PDFs. Please download the PDF to view it: <a href="./loger/graph/strips/ablation/Distance_blocksworld.pdf">Download PDF</a>.</p>
-    </embed>
-</object>
+ 
+ 
+ <p>Accuracy distance for Blocksworld:  <a href="./loger/graph/strips/ablation/Accuracy_blocksworld.pdf">Download PDF</a>.</p>
+
+### Convergent
+	cd loger/tikz/strips/convergent
+	python3 tex_generator.py 
+	make
+
+ <p>Accuracy distance for Blocksworld:  <a href="./loger/graph/strips/convergent/Accuracy_blocksworld.pdf">Download PDF</a>.</p>
+ 
+ 
+## Temporal
+
+
+	cd loger/tikz/temporal
+	python3 tex_generator.py 
+	make
+
+ <p>Accuracy distance for Peg:  <a href="./loger/graph/strips/ablation/Accuracy_peg.pdf">Download PDF</a>.</p>
+ 
+## HTN
+
+ 
+	cd loger/tikz/htn
+	python3 tex_generator.py 
+	make
+
+ <p>Accuracy distance for Blocksworld:  <a href="./loger/graph/strips/ablation/Accuracy_blocksworld.pdf">Download PDF</a>.</p>
