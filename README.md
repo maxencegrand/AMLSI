@@ -70,7 +70,7 @@ Here is a commented example of AMLSI execution. The following command launches c
 	Precision = 0.2962963
 	Fscore automaton 0.30769232
 	############################################
-	### Fluent = 20.0% ### // Number of visible propositions
+	### Fluent = 20.0% ### // Observability level
 
 	*** Noise = 0.0% *** // Noise level
 	STRIPS Generation
@@ -100,9 +100,9 @@ Here is a commented example of AMLSI execution. The following command launches c
 	Syntactical distance : 0.0
 	FSCORE : 1.0
 	############################################
-	### Fluent = 40.0% ### // Number of visible propositions
+	### Fluent = 40.0% ###
 
-	*** Noise = 0.0% *** // Noise level
+	*** Noise = 0.0% ***
 	[...]
 	
 Learned domains are generated in ./log. The file names are generated as follows:

@@ -13,14 +13,14 @@ For a question of memory space, the log files (~50Gb) are not present on this gi
 	make
  
  
- <p>Accuracy distance for Blocksworld:  <a href="./loger/graph/strips/ablation/Accuracy_blocksworld.pdf">Download PDF</a>.</p>
+ <p>Accuracy for Blocksworld:  <a href="./loger/graph/strips/ablation/Accuracy_blocksworld.pdf">Download PDF</a>.</p>
 
 ### Convergent
 	cd loger/tikz/strips/convergent
 	python3 tex_generator.py 
 	make
 
- <p>Accuracy distance for Blocksworld:  <a href="./loger/graph/strips/convergent/Accuracy_blocksworld.pdf">Download PDF</a>.</p>
+ <p>Accuracy for Blocksworld:  <a href="./loger/graph/strips/convergent/Accuracy_blocksworld.pdf">Download PDF</a>.</p>
  
  
 ## Temporal
@@ -30,7 +30,7 @@ For a question of memory space, the log files (~50Gb) are not present on this gi
 	python3 tex_generator.py 
 	make
 
- <p>Accuracy distance for Peg:  <a href="./loger/graph/strips/ablation/Accuracy_peg.pdf">Download PDF</a>.</p>
+ <p>Accuracy for Peg:  <a href="./loger/graph/strips/ablation/Accuracy_peg.pdf">Download PDF</a>.</p>
  
 ## HTN
 
@@ -39,4 +39,4 @@ For a question of memory space, the log files (~50Gb) are not present on this gi
 	python3 tex_generator.py 
 	make
 
- <p>Accuracy distance for Blocksworld:  <a href="./loger/graph/strips/ablation/Accuracy_blocksworld.pdf">Download PDF</a>.</p>
+ <p>Accuracy for Blocksworld:  <a href="./loger/graph/strips/ablation/Accuracy_blocksworld.pdf">Download PDF</a>.</p>
