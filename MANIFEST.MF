@@ -1,0 +1,2 @@
+Main-Class: fr.uga.amlsi.main.Run
+Class-Path: ./lib/pddl4j-4.0.jar ./lib/PddlGenerator.jar classes

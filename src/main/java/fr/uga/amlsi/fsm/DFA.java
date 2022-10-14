@@ -216,7 +216,6 @@ public class DFA{
 	 * @param p &#947;; input
 	 * @param i &#947;; output
 	 * @throws BlocException
-	 * @see fsm.Pair
 	 */
 	public void addTransition(Pair<Integer,Symbol> p, Integer i)
 			throws BlocException{
@@ -255,7 +254,6 @@ public class DFA{
 	 * @param p &#947;; input
 	 * @param i &#947;; output
 	 * @throws BlocException
-	 * @see fsm.Pair
 	 */
 	public void removeTransition(Pair<Integer,Symbol> p, Integer i)
 			throws BlocException{
@@ -271,7 +269,6 @@ public class DFA{
 	 * @param p &#947;; input
 	 * @param i &#947;; output
 	 * @throws BlocException
-	 * @see fsm.Pair
 	 */
 	public void delTransition(Pair<Integer,Symbol> p, Integer i)
 			throws BlocException{
@@ -300,7 +297,6 @@ public class DFA{
 	 * @param p &#947;; input
 	 * @param i &#947;; output
 	 * @return True if &#947;;(p.X, p.Y) : i exists
-	 * @see fsm.Pair
 	 */
 	public boolean containsTransition(Pair<Integer,Symbol> p, Integer i){
 		if(this.delta.containsKey(p.getX())) {
@@ -317,7 +313,6 @@ public class DFA{
 	 * Check if there exists at least one transition delta(p.X, p.Y) : i
 	 * @param p Delta input
 	 * @return True if there exists at least one transition delta(p.X, p.Y) : i
-	 * @see fsm.Pair
 	 */
 	public boolean containsTransition(Pair<Integer,Symbol> p){
 		if(this.delta.containsKey(p.getX())) {
@@ -333,7 +328,6 @@ public class DFA{
 	 * @param p &#947;; input
 	 * @return True if there exists at least one transition
 	 * &#947;;Bloc(p.X, p.Y) : i
-	 * @see fsm.Pair
 	 */
 	public boolean containsBlocTransition(Pair<Bloc,Symbol> p){
 		if(this.deltaBloc.containsKey(p.getX())) {
@@ -526,9 +520,10 @@ public class DFA{
 	}
 
 	/**
-	 * Check if a word is accepted by the ie all action are accepted starting
-	 * from q0
-	 * @param word The word to check
+	 * Check if a symbol is accepted in a given bloc
+	 * 
+	 * @param s The symbol to check
+	 * @param q The bloc
 	 * @return True if the word is accepted
 	 * @throws BlocException
 	 */
@@ -1237,8 +1232,7 @@ public class DFA{
 	/**
 	 * 
 	 * @param t
-	 * @param statesMethods
-	 * @param tableMethods
+	 * @param m
 	 */
 	public void addMethodTransition(
 			TaskTrace t,

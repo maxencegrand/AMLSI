@@ -76,8 +76,8 @@ public class DomainSimulator extends StripsSimulator{
 	 * Constructs 
 	 * @param domain
 	 * @param predicates
-	 * @param positiveStaticPredicates
 	 * @param actions
+	 * @param initial
 	 */
 	public DomainSimulator(
 			Domain domain, 

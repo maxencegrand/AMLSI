@@ -267,7 +267,7 @@ public class Domain {
 	
 	/**
 	 * 
-	 * @param P
+	 * @param A
 	 */
 	public void setA(List<Symbol> A) {
 		this.A=A;

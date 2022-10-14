@@ -18,7 +18,7 @@ SRC=${wildcard ${SRC_PATH}fr/uga/amlsi/baseline/*.java}  \
     ${wildcard ${SRC_PATH}fr/uga/amlsi/main/*.java} \
     ${wildcard ${SRC_PATH}fr/uga/amlsi/main/experiment/*.java}
 
-PACKAGES=fr.uga.amlsi.main fr.uga.amlsi.main.experiment fr.uga.amlsi.baseline fr.uga.amlsi.baseline.lsonio fr.uga.amlsi.fsm fr.uga.amlsi.learning fr.uga.amlsi.simulator fr.uga.amlsi.temporal
+PACKAGES=fr.uga.amlsi.main fr.uga.amlsi.main.experiment fr.uga.amlsi.baseline fr.uga.amlsi.baseline.lsonio fr.uga.amlsi.fsm fr.uga.amlsi.learning fr.uga.amlsi.learning.simulator fr.uga.amlsi.learning.temporal
 #PACKAGES=main main.experiment baseline baseline.lsonio fsm learning learning.preprocess simulator
 CLASSES=${SRC:src/main/java/%.java=%.class}
 

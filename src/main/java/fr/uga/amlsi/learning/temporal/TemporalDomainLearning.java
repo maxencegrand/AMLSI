@@ -78,9 +78,10 @@ public class TemporalDomainLearning extends DomainLearning{
 	 * Compute fitness for positive samples
 	 *
 	 * @param Domain The model
-	 * @param data The observations
+	 * @param S The observations
+	 * @param is Initial state
+	 * 
 	 * @return fitness score
-	 * @throws IOException 
 	 */
 	public float fitPositive(TemporalDomain Domain, List<TemporalExample> S, Observation is) {
 		return Domain.rateOfAccepted(S, is);
@@ -90,9 +91,10 @@ public class TemporalDomainLearning extends DomainLearning{
 	 * Compute fitness for negative samples
 	 *
 	 * @param Domain The model
-	 * @param data The observations
+	 * @param S The observations
+	 * @param compressed Compressed observations
+	 * @param is Initial state
 	 * @return fitness score
-	 * @throws IOException 
 	 */
 	public float fitNegative(
 			TemporalDomain Domain, List<TemporalExample> S, 
@@ -101,12 +103,14 @@ public class TemporalDomainLearning extends DomainLearning{
 	}
 	
 	/**
-	 * Compute the fitness of an Domain
+	 * Compute the fitness of a Domain
 	 * @param indiv the Domain
-	 * @param data the observations
 	 * @param pos I+
 	 * @param neg I-
-	 * @param is The initial state
+	 * @param compressed Compressed I-
+	 * @param duration durations
+	 * @param twoOp true if 2OP translation
+	 * @param initial The initial state
 	 * @return fitness score
 	 */
 	public float fitness(
@@ -312,10 +316,9 @@ public class TemporalDomainLearning extends DomainLearning{
 	
 	/**
 	 * Effects refinement from fsa
-	 * @param action the operator
 	 * @param reduceMapping Mapping post
 	 * @param preconditions all preconditions
-	 * @param postcondition action's effects
+	 * @param postconditions action's effects
 	 * @param A fsa
 	 * @return Refined action's effect
 	 * @throws BlocException

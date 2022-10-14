@@ -806,10 +806,9 @@ public class DomainLearning {
 	
 	/**
 	 * Effects refinement from fsa
-	 * @param action the operator
 	 * @param reduceMapping Mapping post
 	 * @param preconditions all preconditions
-	 * @param postcondition action's effects
+	 * @param postconditions action's effects
 	 * @param A fsa
 	 * @return Refined action's effect
 	 * @throws BlocException

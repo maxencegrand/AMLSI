@@ -4,7 +4,6 @@
 package fr.uga.amlsi.learning;
 
 import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.Collections;
 import java.util.HashMap;
 import java.util.LinkedList;
@@ -160,7 +159,7 @@ public class SearchStorage {
 	/**
      * Construct a queue
      * @param N The size of the queue
-     * @param tabou A Tabu list
+     * @param f initial value
      */
     public SearchStorage(int N, float f){
         this.N = N;
@@ -175,7 +174,8 @@ public class SearchStorage {
     
     /**
      * Add a candidate with the fitness
-     * @param Domain The candidate
+     * @param previous Previous candidates
+	 * @param m The candidate
      * @param fit The candidate's fitness
      */
     public void add(List<Movement> previous, Movement m, float fit) {

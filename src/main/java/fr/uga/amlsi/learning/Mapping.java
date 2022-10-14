@@ -56,7 +56,7 @@ public class Mapping {
     
     /**
      * Get the mapping ante
-     * @param seqObs All observed sequences
+     * @param pos All observed sequences
      * @param A the automaton
      * @param actions all actions
      * @param preds all predicates
@@ -104,7 +104,7 @@ public class Mapping {
 
     /**
      * Get the mapping post
-     * @param seqObs All observed sequences
+     * @param pos All observed sequences
      * @param A the automaton
      * @param actions all actions
      * @param preds all predicates

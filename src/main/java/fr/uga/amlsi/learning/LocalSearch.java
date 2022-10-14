@@ -5,12 +5,8 @@ package fr.uga.amlsi.learning;
 
 import java.util.ArrayList;
 import java.util.HashMap;
-import java.util.LinkedHashMap;
-import java.util.LinkedList;
 import java.util.List;
 import java.util.Map;
-import java.util.logging.Level;
-import java.util.logging.Logger;
 
 import fr.uga.generator.symbols.Symbol;
 import fr.uga.generator.symbols.trace.CompressedNegativeExample;
@@ -20,8 +16,6 @@ import fr.uga.generator.symbols.trace.ObservedExample;
 import fr.uga.generator.symbols.trace.Sample;
 import fr.uga.generator.symbols.trace.Trace;
 import fr.uga.generator.utils.Pair;
-import fr.uga.amlsi.learning.temporal.TemporalDomain;
-import fr.uga.amlsi.main.Argument;
 import fr.uga.amlsi.learning.simulator.DomainSimulator;
 import fr.uga.amlsi.learning.simulator.Movement;
 
@@ -85,7 +79,6 @@ public class LocalSearch {
 	/**
 	 * Compute the fitness of an Domain
 	 * @param indiv the Domain
-	 * @param data the observations
 	 * @param pos I+
 	 * @param neg I-
 	 * @param is The initial state

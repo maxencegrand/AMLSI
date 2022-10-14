@@ -35,12 +35,13 @@ public class Movement implements Comparable<Movement>{
 	 */
 	private Value previous;
 	/**
+	 * 
 	 * Constructs 
 	 * @param operator
-	 * @param predicates
-	 * @param add
+	 * @param predicate
 	 * @param precondition
 	 * @param value
+	 * @param previous
 	 */
 	public Movement(
 			Symbol operator, 
@@ -77,7 +78,7 @@ public class Movement implements Comparable<Movement>{
 	}
 	/**
 	 * Setter predicates
-	 * @param predicates the predicates to set
+	 * @param predicate the predicate to set
 	 */
 	public void setPredicates(Symbol predicate) {
 		this.predicate = predicate;

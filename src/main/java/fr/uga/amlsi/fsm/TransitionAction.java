@@ -142,7 +142,6 @@ public class TransitionAction extends Action{
      * is replaced by the corresponding abstract parameters ?xi
      *
      * @return A symbol
-     * @see fsm.Symbol#mapping()
      */
 	@Override
 	public Symbol clone() {

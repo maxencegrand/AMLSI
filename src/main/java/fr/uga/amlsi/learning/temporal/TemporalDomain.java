@@ -335,7 +335,6 @@ public class TemporalDomain {
 	/**
 	 * 
 	 * Constructs 
-	 * @param classical
 	 * @param durations
 	 */
 	public TemporalDomain(Map<Symbol, Float> durations) {
@@ -714,7 +713,8 @@ public class TemporalDomain {
 
 	/**
 	 * 
-	 * @param temp
+	 * @param pos
+	 * @param neg
 	 * @param is
 	 * @return
 	 */

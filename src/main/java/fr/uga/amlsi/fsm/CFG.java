@@ -18,7 +18,6 @@ import fr.uga.generator.symbols.trace.Example;
 import fr.uga.generator.symbols.trace.TaskTrace;
 import fr.uga.generator.symbols.trace.Trace;
 import fr.uga.generator.symbols.Task;
-import fr.uga.generator.symbols.Symbol;
 
 
 
@@ -406,8 +405,7 @@ public class CFG {
 	
 	/**
 	 * 
-	 * @param constants
-	 * @param tasks
+	 * @param t
 	 * @return
 	 */
 	public boolean accept(TaskTrace t) {
