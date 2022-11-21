@@ -1,0 +1,12 @@
+(define (problem pfile_01_001)
+(:domain robot)
+(:objects o1 - PACKAGE c r1 - ROOM d01 - ROOMDOOR)
+(:init
+    (rloc c)
+    (armempty)
+    (door c r1 d01)
+    (door r1 c d01)
+    (closed d01)
+    (in o1 c)
+    (goal_in o1 r1))
+(:goal (and (in o1 r1))))

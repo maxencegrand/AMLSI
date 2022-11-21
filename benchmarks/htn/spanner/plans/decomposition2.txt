@@ -1,0 +1,15 @@
+==>
+4 walk shed location1 bob
+5 walk location1 location2 bob
+6 pickup_spanner location2 spanner1 bob
+9 walk location2 location3 bob
+10 walk location3 gate bob
+11 tighten_nut gate spanner1 bob nut1
+root 0
+0 (do-tighten_nut nut1) -> m-tighten_nut-1 1 7 11
+1 (do-pickup_spanner spanner1 bob) -> m-do-pickup_spanner-1 2 6
+2 (goto location2 bob) -> m-goto-2 3 5
+3 (goto location1 bob) -> m-goto-1 4
+7 (goto gate bob) -> m-goto-2 8 10
+8 (goto location3 bob) -> m-goto-1 9
+<==

@@ -1,0 +1,83 @@
+(define (domain miconic)
+  (:requirements :strips :typing :negative-preconditions :hierarchy :method-preconditions)
+  (:types passenger
+          floor)
+
+(:predicates
+(origin ?person - passenger ?floor - floor)
+(destin ?person - passenger ?floor - floor)
+(above-direct ?floor1 - floor  ?floor2 - floor)
+(above ?floor1 - floor  ?floor2 - floor)
+(boarded ?person - passenger)
+(served ?person - passenger)
+(lift-at ?floor - floor))
+
+;;; Compound tasks
+(:task deliver-person :parameters(?p - passenger))
+
+(:task goto :parameters(?f - floor))
+
+
+(:method m-goto-0
+    :parameters (?f - floor)
+    :task (goto ?f)
+    :precondition (and (lift-at ?f))
+    :ordered-subtasks (and)
+)
+
+(:method m-goto-1
+    :parameters (?f ?f2 - floor)
+    :task (goto ?f)
+    :precondition (and (lift-at ?f2) (above-direct ?f2 ?f))
+    :ordered-subtasks (and (up ?f2 ?f))
+)
+
+(:method m-goto-2
+    :parameters (?f ?f2 - floor)
+    :task (goto ?f)
+    :precondition (and (lift-at ?f2) (above-direct ?f ?f2))
+    :ordered-subtasks (and (down ?f2 ?f))
+)
+
+(:method m-goto-3
+    :parameters (?f ?f2 ?f3 - floor)
+    :task (goto ?f)
+    :precondition (and (lift-at ?f2) (above-direct ?f2 ?f3) (above ?f3 ?f))
+    :ordered-subtasks (and (up ?f2 ?f3) (goto ?f))
+)
+
+(:method m-goto-4
+    :parameters (?f ?f2 ?f3 - floor)
+    :task (goto ?f)
+    :precondition (and (lift-at ?f2) (above-direct ?f3 ?f2) (above ?f ?f3))
+    :ordered-subtasks (and (down ?f2 ?f3) (goto ?f))
+)
+
+(:method m-deliver-person
+    :parameters (?p - passenger ?o - floor ?d - floor)
+    :task (deliver-person ?p)
+    :precondition (and (origin ?p ?o) (destin ?p ?d) (not(boarded ?p)) (not(served ?p)))
+    :ordered-subtasks (and (goto ?o) (board ?o ?p) (goto ?d) (depart ?d ?p))
+)
+
+(:action board
+  :parameters (?f - floor ?p - passenger)
+  :precondition (and (lift-at ?f) (origin ?p ?f) (not(boarded ?p)) (not(served ?p)) )
+  :effect (and(boarded ?p) ))
+
+(:action depart
+  :parameters (?f - floor ?p - passenger)
+  :precondition (and (lift-at ?f) (destin ?p ?f)
+		     (boarded ?p) (not(served ?p)))
+  :effect (and (not (boarded ?p))
+	       (served ?p)
+               ))
+(:action up
+  :parameters (?f1 - floor ?f2 - floor)
+  :precondition (and (lift-at ?f1) (above-direct ?f1 ?f2))
+  :effect (and (lift-at ?f2) (not (lift-at ?f1))))
+(:action down
+  :parameters (?f1 - floor ?f2 - floor)
+  :precondition (and (lift-at ?f1) (above-direct ?f2 ?f1))
+  :effect (and (lift-at ?f2) (not (lift-at ?f1))))
+)

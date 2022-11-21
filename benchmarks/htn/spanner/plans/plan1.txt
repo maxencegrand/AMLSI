@@ -1,0 +1,4 @@
+0: (              walk shed location1 bob) [0]
+1: (pickup_spanner location1 spanner1 bob) [0]
+2: (              walk location1 gate bob) [0]
+3: (   tighten_nut gate spanner1 bob nut1) [0]

@@ -1,0 +1,31 @@
+(define (problem is)
+(:domain entertainment)
+(:objects
+loc0 loc1 loc2 - room
+d0 d1 - roomdoor
+obj0 - package
+)
+(:htn :tasks (and
+(achieve-goals obj0)
+(pickup_abstract obj0)
+(putdown_abstract obj0)
+(move_abstract loc0)
+(move_abstract loc1)
+(move_abstract loc2)
+))
+(:init
+(armempty)
+(rloc loc1)
+
+(closed d0)
+(door loc0 loc2 d0)
+(door loc2 loc0 d0)
+(closed d1)
+(door loc2 loc1 d1)
+(door loc1 loc2 d1)
+
+(in obj0 loc1)
+
+(goal_in obj0 loc0)
+
+))

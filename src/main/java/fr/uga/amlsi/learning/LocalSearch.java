@@ -211,9 +211,11 @@ public class LocalSearch {
 	
 	/**
 	 * Compute fitness for negative samples
-	 *
-	 * @param Domain The model
-	 * @param data The observations
+	 * 
+	 * @param Domain the domain
+	 * @param data negative examples
+	 * @param compressed compressed negative examples
+	 * @param initial initial state
 	 * @return fitness score
 	 */
 	public int fitNegative(
@@ -946,51 +948,51 @@ public class LocalSearch {
 		return res;
 	}
 	
-	/**
-	 * 
-	 * @param indiv
-	 * @param pos
-	 * @param neg
-	 * @param compressed
-	 * @param is
-	 */
-	public void printFitnessComponents(
-			Domain indiv, Sample pos, Sample neg, 
-			List<CompressedNegativeExample> compressed, String is) {
-		ObservedExample obs = (ObservedExample) pos.getExamples().get(0);
-		Observation initial = obs.getInitialState();
-		float fitPos = this.fitPositive(indiv, pos, initial);
-		float fitNeg = this.fitNegative(indiv, neg, compressed, initial);
-		float fitPrec = this.fitPrecondition(indiv, pos);
-		float fitPost = this.fitPostcondition(indiv, pos);
-		System.out.println(fitPos+" "+fitNeg+" "+fitPrec+" "+fitPost);
-	}
+//	/**
+//	 * 
+//	 * @param indiv
+//	 * @param pos
+//	 * @param neg
+//	 * @param compressed
+//	 * @param is
+//	 */
+//	public void printFitnessComponents(
+//			Domain indiv, Sample pos, Sample neg, 
+//			List<CompressedNegativeExample> compressed, String is) {
+//		ObservedExample obs = (ObservedExample) pos.getExamples().get(0);
+//		Observation initial = obs.getInitialState();
+//		float fitPos = this.fitPositive(indiv, pos, initial);
+//		float fitNeg = this.fitNegative(indiv, neg, compressed, initial);
+//		float fitPrec = this.fitPrecondition(indiv, pos);
+//		float fitPost = this.fitPostcondition(indiv, pos);
+//		System.out.println(fitPos+" "+fitNeg+" "+fitPrec+" "+fitPost);
+//	}
+//	
+//	public void printFitnessComponents(
+//			Domain indiv, Sample pos, Sample neg, 
+//			List<CompressedNegativeExample> compressed, Observation initial) {
+//		float fitPos = this.fitPositive(indiv, pos, initial);
+//		float fitNeg = this.fitNegative(indiv, neg, compressed, initial);
+//		float fitPrec = this.fitPrecondition(indiv, pos);
+//		float fitPost = this.fitPostcondition(indiv, pos);
+//		System.out.println("Fit positive : "+fitPos);
+//		System.out.println("Fit negative : "+fitNeg);
+//		System.out.println("Fit precondition : "+fitPrec);
+//		System.out.println("Fit postcondition : "+fitPost);
+//		System.out.println("Fitness : "+(fitPos+fitNeg+fitPrec+fitPost));
+//	}
 	
-	public void printFitnessComponents(
-			Domain indiv, Sample pos, Sample neg, 
-			List<CompressedNegativeExample> compressed, Observation initial) {
-		float fitPos = this.fitPositive(indiv, pos, initial);
-		float fitNeg = this.fitNegative(indiv, neg, compressed, initial);
-		float fitPrec = this.fitPrecondition(indiv, pos);
-		float fitPost = this.fitPostcondition(indiv, pos);
-		System.out.println("Fit positive : "+fitPos);
-		System.out.println("Fit negative : "+fitNeg);
-		System.out.println("Fit precondition : "+fitPrec);
-		System.out.println("Fit postcondition : "+fitPost);
-		System.out.println("Fitness : "+(fitPos+fitNeg+fitPrec+fitPost));
-	}
-	
 	/**
-	 * 
-	 * @param indiv
-	 * @param pos
-	 * @param neg
-	 * @param compressed
-	 * @param is
-	 * @param size
-	 * @param epoch
-	 * @param tabou
-	 * @return
+	 * Tabu search (TS)
+	 * @param indiv initial domain
+	 * @param pos positive examples
+	 * @param neg negative examples
+	 * @param compressed compressed examples
+	 * @param is initial state
+	 * @param size size of the TS
+	 * @param epoch number of epoch
+	 * @param tabou tabou domains
+	 * @return domain
 	 */
 	public Domain tabu(	
 			Domain indiv, 
@@ -1236,7 +1238,7 @@ public class LocalSearch {
 	 * @param I
 	 * @return
 	 */
-	public boolean pairewiseConsistance(Domain d, Sample I) {
+	private boolean pairewiseConsistance(Domain d, Sample I) {
 		Pair<Map<Symbol, Observation>,Map<Symbol, Observation>> p = d.decode();
 		Map<Symbol, Observation> preconditions = p.getX();
 		Map<Symbol, Observation> postconditions = p.getY();

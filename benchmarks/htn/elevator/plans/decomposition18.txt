@@ -1,0 +1,349 @@
+==>
+2 down floor_18 floor_17
+4 down floor_17 floor_16
+6 down floor_16 floor_15
+8 down floor_15 floor_14
+10 down floor_14 floor_13
+12 down floor_13 floor_12
+14 down floor_12 floor_11
+16 down floor_11 floor_10
+18 down floor_10 floor_9
+20 down floor_9 floor_8
+22 down floor_8 floor_7
+24 down floor_7 floor_6
+25 board floor_6 passenger_0
+27 down floor_6 floor_5
+29 down floor_5 floor_4
+30 depart floor_4 passenger_0
+33 board floor_4 passenger_1
+35 up floor_4 floor_5
+36 depart floor_5 passenger_1
+39 up floor_5 floor_6
+40 board floor_6 passenger_2
+42 up floor_6 floor_7
+43 depart floor_7 passenger_2
+46 up floor_7 floor_8
+48 up floor_8 floor_9
+50 up floor_9 floor_10
+52 up floor_10 floor_11
+54 up floor_11 floor_12
+55 board floor_12 passenger_3
+57 down floor_12 floor_11
+59 down floor_11 floor_10
+61 down floor_10 floor_9
+63 down floor_9 floor_8
+65 down floor_8 floor_7
+67 down floor_7 floor_6
+69 down floor_6 floor_5
+71 down floor_5 floor_4
+73 down floor_4 floor_3
+75 down floor_3 floor_2
+77 down floor_2 floor_1
+79 down floor_1 floor_0
+80 depart floor_0 passenger_3
+83 up floor_0 floor_1
+85 up floor_1 floor_2
+87 up floor_2 floor_3
+89 up floor_3 floor_4
+91 up floor_4 floor_5
+93 up floor_5 floor_6
+95 up floor_6 floor_7
+97 up floor_7 floor_8
+99 up floor_8 floor_9
+101 up floor_9 floor_10
+103 up floor_10 floor_11
+105 up floor_11 floor_12
+107 up floor_12 floor_13
+109 up floor_13 floor_14
+110 board floor_14 passenger_4
+112 down floor_14 floor_13
+114 down floor_13 floor_12
+115 depart floor_12 passenger_4
+118 down floor_12 floor_11
+120 down floor_11 floor_10
+122 down floor_10 floor_9
+124 down floor_9 floor_8
+125 board floor_8 passenger_5
+127 down floor_8 floor_7
+129 down floor_7 floor_6
+131 down floor_6 floor_5
+133 down floor_5 floor_4
+135 down floor_4 floor_3
+137 down floor_3 floor_2
+139 down floor_2 floor_1
+140 depart floor_1 passenger_5
+143 up floor_1 floor_2
+145 up floor_2 floor_3
+147 up floor_3 floor_4
+148 board floor_4 passenger_6
+150 up floor_4 floor_5
+152 up floor_5 floor_6
+154 up floor_6 floor_7
+156 up floor_7 floor_8
+158 up floor_8 floor_9
+160 up floor_9 floor_10
+162 up floor_10 floor_11
+164 up floor_11 floor_12
+166 up floor_12 floor_13
+168 up floor_13 floor_14
+170 up floor_14 floor_15
+172 up floor_15 floor_16
+173 depart floor_16 passenger_6
+176 down floor_16 floor_15
+178 down floor_15 floor_14
+180 down floor_14 floor_13
+182 down floor_13 floor_12
+184 down floor_12 floor_11
+186 down floor_11 floor_10
+188 down floor_10 floor_9
+190 down floor_9 floor_8
+192 down floor_8 floor_7
+194 down floor_7 floor_6
+196 down floor_6 floor_5
+198 down floor_5 floor_4
+200 down floor_4 floor_3
+202 down floor_3 floor_2
+204 down floor_2 floor_1
+205 board floor_1 passenger_7
+207 up floor_1 floor_2
+209 up floor_2 floor_3
+211 up floor_3 floor_4
+213 up floor_4 floor_5
+215 up floor_5 floor_6
+217 up floor_6 floor_7
+218 depart floor_7 passenger_7
+221 down floor_7 floor_6
+223 down floor_6 floor_5
+225 down floor_5 floor_4
+226 board floor_4 passenger_8
+228 up floor_4 floor_5
+229 depart floor_5 passenger_8
+232 up floor_5 floor_6
+234 up floor_6 floor_7
+236 up floor_7 floor_8
+238 up floor_8 floor_9
+240 up floor_9 floor_10
+242 up floor_10 floor_11
+243 board floor_11 passenger_9
+245 up floor_11 floor_12
+247 up floor_12 floor_13
+249 up floor_13 floor_14
+251 up floor_14 floor_15
+253 up floor_15 floor_16
+255 up floor_16 floor_17
+257 up floor_17 floor_18
+259 up floor_18 floor_19
+260 depart floor_19 passenger_9
+263 board floor_19 passenger_10
+265 down floor_19 floor_18
+267 down floor_18 floor_17
+269 down floor_17 floor_16
+270 depart floor_16 passenger_10
+273 up floor_16 floor_17
+274 board floor_17 passenger_11
+276 down floor_17 floor_16
+278 down floor_16 floor_15
+280 down floor_15 floor_14
+282 down floor_14 floor_13
+284 down floor_13 floor_12
+286 down floor_12 floor_11
+288 down floor_11 floor_10
+290 down floor_10 floor_9
+292 down floor_9 floor_8
+293 depart floor_8 passenger_11
+296 up floor_8 floor_9
+298 up floor_9 floor_10
+300 up floor_10 floor_11
+302 up floor_11 floor_12
+303 board floor_12 passenger_12
+305 down floor_12 floor_11
+307 down floor_11 floor_10
+309 down floor_10 floor_9
+311 down floor_9 floor_8
+312 depart floor_8 passenger_12
+315 down floor_8 floor_7
+317 down floor_7 floor_6
+319 down floor_6 floor_5
+320 board floor_5 passenger_13
+322 up floor_5 floor_6
+324 up floor_6 floor_7
+326 up floor_7 floor_8
+328 up floor_8 floor_9
+330 up floor_9 floor_10
+332 up floor_10 floor_11
+334 up floor_11 floor_12
+336 up floor_12 floor_13
+338 up floor_13 floor_14
+340 up floor_14 floor_15
+342 up floor_15 floor_16
+344 up floor_16 floor_17
+345 depart floor_17 passenger_13
+root 0 31 37 44 81 116 141 174 219 230 261 271 294 313
+0 (deliver-person passenger_0) -> m-deliver-person 1 25 26 30
+1 (goto floor_6) -> m-goto-4 2 3
+3 (goto floor_6) -> m-goto-4 4 5
+5 (goto floor_6) -> m-goto-4 6 7
+7 (goto floor_6) -> m-goto-4 8 9
+9 (goto floor_6) -> m-goto-4 10 11
+11 (goto floor_6) -> m-goto-4 12 13
+13 (goto floor_6) -> m-goto-4 14 15
+15 (goto floor_6) -> m-goto-4 16 17
+17 (goto floor_6) -> m-goto-4 18 19
+19 (goto floor_6) -> m-goto-4 20 21
+21 (goto floor_6) -> m-goto-4 22 23
+23 (goto floor_6) -> m-goto-2 24
+26 (goto floor_4) -> m-goto-4 27 28
+28 (goto floor_4) -> m-goto-2 29
+31 (deliver-person passenger_1) -> m-deliver-person 32 33 34 36
+32 (goto floor_4) -> m-goto-0
+34 (goto floor_5) -> m-goto-1 35
+37 (deliver-person passenger_2) -> m-deliver-person 38 40 41 43
+38 (goto floor_6) -> m-goto-1 39
+41 (goto floor_7) -> m-goto-1 42
+44 (deliver-person passenger_3) -> m-deliver-person 45 55 56 80
+45 (goto floor_12) -> m-goto-3 46 47
+47 (goto floor_12) -> m-goto-3 48 49
+49 (goto floor_12) -> m-goto-3 50 51
+51 (goto floor_12) -> m-goto-3 52 53
+53 (goto floor_12) -> m-goto-1 54
+56 (goto floor_0) -> m-goto-4 57 58
+58 (goto floor_0) -> m-goto-4 59 60
+60 (goto floor_0) -> m-goto-4 61 62
+62 (goto floor_0) -> m-goto-4 63 64
+64 (goto floor_0) -> m-goto-4 65 66
+66 (goto floor_0) -> m-goto-4 67 68
+68 (goto floor_0) -> m-goto-4 69 70
+70 (goto floor_0) -> m-goto-4 71 72
+72 (goto floor_0) -> m-goto-4 73 74
+74 (goto floor_0) -> m-goto-4 75 76
+76 (goto floor_0) -> m-goto-4 77 78
+78 (goto floor_0) -> m-goto-2 79
+81 (deliver-person passenger_4) -> m-deliver-person 82 110 111 115
+82 (goto floor_14) -> m-goto-3 83 84
+84 (goto floor_14) -> m-goto-3 85 86
+86 (goto floor_14) -> m-goto-3 87 88
+88 (goto floor_14) -> m-goto-3 89 90
+90 (goto floor_14) -> m-goto-3 91 92
+92 (goto floor_14) -> m-goto-3 93 94
+94 (goto floor_14) -> m-goto-3 95 96
+96 (goto floor_14) -> m-goto-3 97 98
+98 (goto floor_14) -> m-goto-3 99 100
+100 (goto floor_14) -> m-goto-3 101 102
+102 (goto floor_14) -> m-goto-3 103 104
+104 (goto floor_14) -> m-goto-3 105 106
+106 (goto floor_14) -> m-goto-3 107 108
+108 (goto floor_14) -> m-goto-1 109
+111 (goto floor_12) -> m-goto-4 112 113
+113 (goto floor_12) -> m-goto-2 114
+116 (deliver-person passenger_5) -> m-deliver-person 117 125 126 140
+117 (goto floor_8) -> m-goto-4 118 119
+119 (goto floor_8) -> m-goto-4 120 121
+121 (goto floor_8) -> m-goto-4 122 123
+123 (goto floor_8) -> m-goto-2 124
+126 (goto floor_1) -> m-goto-4 127 128
+128 (goto floor_1) -> m-goto-4 129 130
+130 (goto floor_1) -> m-goto-4 131 132
+132 (goto floor_1) -> m-goto-4 133 134
+134 (goto floor_1) -> m-goto-4 135 136
+136 (goto floor_1) -> m-goto-4 137 138
+138 (goto floor_1) -> m-goto-2 139
+141 (deliver-person passenger_6) -> m-deliver-person 142 148 149 173
+142 (goto floor_4) -> m-goto-3 143 144
+144 (goto floor_4) -> m-goto-3 145 146
+146 (goto floor_4) -> m-goto-1 147
+149 (goto floor_16) -> m-goto-3 150 151
+151 (goto floor_16) -> m-goto-3 152 153
+153 (goto floor_16) -> m-goto-3 154 155
+155 (goto floor_16) -> m-goto-3 156 157
+157 (goto floor_16) -> m-goto-3 158 159
+159 (goto floor_16) -> m-goto-3 160 161
+161 (goto floor_16) -> m-goto-3 162 163
+163 (goto floor_16) -> m-goto-3 164 165
+165 (goto floor_16) -> m-goto-3 166 167
+167 (goto floor_16) -> m-goto-3 168 169
+169 (goto floor_16) -> m-goto-3 170 171
+171 (goto floor_16) -> m-goto-1 172
+174 (deliver-person passenger_7) -> m-deliver-person 175 205 206 218
+175 (goto floor_1) -> m-goto-4 176 177
+177 (goto floor_1) -> m-goto-4 178 179
+179 (goto floor_1) -> m-goto-4 180 181
+181 (goto floor_1) -> m-goto-4 182 183
+183 (goto floor_1) -> m-goto-4 184 185
+185 (goto floor_1) -> m-goto-4 186 187
+187 (goto floor_1) -> m-goto-4 188 189
+189 (goto floor_1) -> m-goto-4 190 191
+191 (goto floor_1) -> m-goto-4 192 193
+193 (goto floor_1) -> m-goto-4 194 195
+195 (goto floor_1) -> m-goto-4 196 197
+197 (goto floor_1) -> m-goto-4 198 199
+199 (goto floor_1) -> m-goto-4 200 201
+201 (goto floor_1) -> m-goto-4 202 203
+203 (goto floor_1) -> m-goto-2 204
+206 (goto floor_7) -> m-goto-3 207 208
+208 (goto floor_7) -> m-goto-3 209 210
+210 (goto floor_7) -> m-goto-3 211 212
+212 (goto floor_7) -> m-goto-3 213 214
+214 (goto floor_7) -> m-goto-3 215 216
+216 (goto floor_7) -> m-goto-1 217
+219 (deliver-person passenger_8) -> m-deliver-person 220 226 227 229
+220 (goto floor_4) -> m-goto-4 221 222
+222 (goto floor_4) -> m-goto-4 223 224
+224 (goto floor_4) -> m-goto-2 225
+227 (goto floor_5) -> m-goto-1 228
+230 (deliver-person passenger_9) -> m-deliver-person 231 243 244 260
+231 (goto floor_11) -> m-goto-3 232 233
+233 (goto floor_11) -> m-goto-3 234 235
+235 (goto floor_11) -> m-goto-3 236 237
+237 (goto floor_11) -> m-goto-3 238 239
+239 (goto floor_11) -> m-goto-3 240 241
+241 (goto floor_11) -> m-goto-1 242
+244 (goto floor_19) -> m-goto-3 245 246
+246 (goto floor_19) -> m-goto-3 247 248
+248 (goto floor_19) -> m-goto-3 249 250
+250 (goto floor_19) -> m-goto-3 251 252
+252 (goto floor_19) -> m-goto-3 253 254
+254 (goto floor_19) -> m-goto-3 255 256
+256 (goto floor_19) -> m-goto-3 257 258
+258 (goto floor_19) -> m-goto-1 259
+261 (deliver-person passenger_10) -> m-deliver-person 262 263 264 270
+262 (goto floor_19) -> m-goto-0
+264 (goto floor_16) -> m-goto-4 265 266
+266 (goto floor_16) -> m-goto-4 267 268
+268 (goto floor_16) -> m-goto-2 269
+271 (deliver-person passenger_11) -> m-deliver-person 272 274 275 293
+272 (goto floor_17) -> m-goto-1 273
+275 (goto floor_8) -> m-goto-4 276 277
+277 (goto floor_8) -> m-goto-4 278 279
+279 (goto floor_8) -> m-goto-4 280 281
+281 (goto floor_8) -> m-goto-4 282 283
+283 (goto floor_8) -> m-goto-4 284 285
+285 (goto floor_8) -> m-goto-4 286 287
+287 (goto floor_8) -> m-goto-4 288 289
+289 (goto floor_8) -> m-goto-4 290 291
+291 (goto floor_8) -> m-goto-2 292
+294 (deliver-person passenger_12) -> m-deliver-person 295 303 304 312
+295 (goto floor_12) -> m-goto-3 296 297
+297 (goto floor_12) -> m-goto-3 298 299
+299 (goto floor_12) -> m-goto-3 300 301
+301 (goto floor_12) -> m-goto-1 302
+304 (goto floor_8) -> m-goto-4 305 306
+306 (goto floor_8) -> m-goto-4 307 308
+308 (goto floor_8) -> m-goto-4 309 310
+310 (goto floor_8) -> m-goto-2 311
+313 (deliver-person passenger_13) -> m-deliver-person 314 320 321 345
+314 (goto floor_5) -> m-goto-4 315 316
+316 (goto floor_5) -> m-goto-4 317 318
+318 (goto floor_5) -> m-goto-2 319
+321 (goto floor_17) -> m-goto-3 322 323
+323 (goto floor_17) -> m-goto-3 324 325
+325 (goto floor_17) -> m-goto-3 326 327
+327 (goto floor_17) -> m-goto-3 328 329
+329 (goto floor_17) -> m-goto-3 330 331
+331 (goto floor_17) -> m-goto-3 332 333
+333 (goto floor_17) -> m-goto-3 334 335
+335 (goto floor_17) -> m-goto-3 336 337
+337 (goto floor_17) -> m-goto-3 338 339
+339 (goto floor_17) -> m-goto-3 340 341
+341 (goto floor_17) -> m-goto-3 342 343
+343 (goto floor_17) -> m-goto-1 344
+<==

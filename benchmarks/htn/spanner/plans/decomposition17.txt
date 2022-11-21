@@ -1,0 +1,181 @@
+==>
+7 walk shed location1 bob
+8 walk location1 location2 bob
+9 walk location2 location3 bob
+10 walk location3 location4 bob
+11 walk location4 location5 bob
+12 pickup_spanner location5 spanner6 bob
+19 walk location5 location6 bob
+20 walk location6 location7 bob
+21 walk location7 location8 bob
+22 walk location8 location9 bob
+23 walk location9 location10 bob
+24 walk location10 gate bob
+25 tighten_nut gate spanner6 bob nut1
+29 walk gate location10 bob
+30 pickup_spanner location10 spanner1 bob
+32 walk location10 gate bob
+33 tighten_nut gate spanner1 bob nut2
+38 walk gate location10 bob
+39 walk location10 location9 bob
+40 pickup_spanner location9 spanner2 bob
+45 walk location9 location10 bob
+46 walk location10 gate bob
+47 walk gate location10 bob
+48 walk location10 gate bob
+49 tighten_nut gate spanner2 bob nut3
+56 walk gate location10 bob
+57 walk location10 location9 bob
+58 walk location9 location8 bob
+59 walk location8 location7 bob
+60 pickup_spanner location7 spanner3 bob
+65 walk location7 location8 bob
+66 walk location8 location9 bob
+67 walk location9 location10 bob
+68 walk location10 gate bob
+69 tighten_nut gate spanner3 bob nut4
+76 walk gate location10 bob
+77 walk location10 location9 bob
+78 walk location9 location8 bob
+79 walk location8 location7 bob
+80 pickup_spanner location7 spanner7 bob
+87 walk location7 location8 bob
+88 walk location8 location9 bob
+89 walk location9 location10 bob
+90 walk location10 location9 bob
+91 walk location9 location10 bob
+92 walk location10 gate bob
+93 tighten_nut gate spanner7 bob nut5
+101 walk gate location10 bob
+102 walk location10 location9 bob
+103 walk location9 location8 bob
+104 walk location8 location7 bob
+105 walk location7 location6 bob
+106 pickup_spanner location6 spanner5 bob
+112 walk location6 location7 bob
+113 walk location7 location8 bob
+114 walk location8 location9 bob
+115 walk location9 location10 bob
+116 walk location10 gate bob
+117 tighten_nut gate spanner5 bob nut6
+126 walk gate location10 bob
+127 walk location10 location9 bob
+128 walk location9 location8 bob
+129 walk location8 location7 bob
+130 walk location7 location6 bob
+131 walk location6 location5 bob
+132 pickup_spanner location5 spanner8 bob
+139 walk location5 location6 bob
+140 walk location6 location7 bob
+141 walk location7 location8 bob
+142 walk location8 location9 bob
+143 walk location9 location10 bob
+144 walk location10 gate bob
+145 tighten_nut gate spanner8 bob nut7
+155 walk gate location10 bob
+156 walk location10 location9 bob
+157 walk location9 location8 bob
+158 walk location8 location7 bob
+159 walk location7 location6 bob
+160 walk location6 location5 bob
+161 walk location5 location4 bob
+162 pickup_spanner location4 spanner4 bob
+170 walk location4 location5 bob
+171 walk location5 location6 bob
+172 walk location6 location7 bob
+173 walk location7 location8 bob
+174 walk location8 location9 bob
+175 walk location9 location10 bob
+176 walk location10 gate bob
+177 tighten_nut gate spanner4 bob nut8
+root 0 26 34 50 70 94 118 146
+0 (do-tighten_nut nut1) -> m-tighten_nut-1 1 13 25
+1 (do-pickup_spanner spanner6 bob) -> m-do-pickup_spanner-1 2 12
+2 (goto location5 bob) -> m-goto-2 3 11
+3 (goto location4 bob) -> m-goto-2 4 10
+4 (goto location3 bob) -> m-goto-2 5 9
+5 (goto location2 bob) -> m-goto-2 6 8
+6 (goto location1 bob) -> m-goto-1 7
+13 (goto gate bob) -> m-goto-2 14 24
+14 (goto location10 bob) -> m-goto-2 15 23
+15 (goto location9 bob) -> m-goto-2 16 22
+16 (goto location8 bob) -> m-goto-2 17 21
+17 (goto location7 bob) -> m-goto-2 18 20
+18 (goto location6 bob) -> m-goto-1 19
+26 (do-tighten_nut nut2) -> m-tighten_nut-1 27 31 33
+27 (do-pickup_spanner spanner1 bob) -> m-do-pickup_spanner-1 28 30
+28 (goto location10 bob) -> m-goto-1 29
+31 (goto gate bob) -> m-goto-1 32
+34 (do-tighten_nut nut3) -> m-tighten_nut-1 35 41 49
+35 (do-pickup_spanner spanner2 bob) -> m-do-pickup_spanner-1 36 40
+36 (goto location9 bob) -> m-goto-2 37 39
+37 (goto location10 bob) -> m-goto-1 38
+41 (goto gate bob) -> m-goto-2 42 48
+42 (goto location10 bob) -> m-goto-2 43 47
+43 (goto gate bob) -> m-goto-2 44 46
+44 (goto location10 bob) -> m-goto-1 45
+50 (do-tighten_nut nut4) -> m-tighten_nut-1 51 61 69
+51 (do-pickup_spanner spanner3 bob) -> m-do-pickup_spanner-1 52 60
+52 (goto location7 bob) -> m-goto-2 53 59
+53 (goto location8 bob) -> m-goto-2 54 58
+54 (goto location9 bob) -> m-goto-2 55 57
+55 (goto location10 bob) -> m-goto-1 56
+61 (goto gate bob) -> m-goto-2 62 68
+62 (goto location10 bob) -> m-goto-2 63 67
+63 (goto location9 bob) -> m-goto-2 64 66
+64 (goto location8 bob) -> m-goto-1 65
+70 (do-tighten_nut nut5) -> m-tighten_nut-1 71 81 93
+71 (do-pickup_spanner spanner7 bob) -> m-do-pickup_spanner-1 72 80
+72 (goto location7 bob) -> m-goto-2 73 79
+73 (goto location8 bob) -> m-goto-2 74 78
+74 (goto location9 bob) -> m-goto-2 75 77
+75 (goto location10 bob) -> m-goto-1 76
+81 (goto gate bob) -> m-goto-2 82 92
+82 (goto location10 bob) -> m-goto-2 83 91
+83 (goto location9 bob) -> m-goto-2 84 90
+84 (goto location10 bob) -> m-goto-2 85 89
+85 (goto location9 bob) -> m-goto-2 86 88
+86 (goto location8 bob) -> m-goto-1 87
+94 (do-tighten_nut nut6) -> m-tighten_nut-1 95 107 117
+95 (do-pickup_spanner spanner5 bob) -> m-do-pickup_spanner-1 96 106
+96 (goto location6 bob) -> m-goto-2 97 105
+97 (goto location7 bob) -> m-goto-2 98 104
+98 (goto location8 bob) -> m-goto-2 99 103
+99 (goto location9 bob) -> m-goto-2 100 102
+100 (goto location10 bob) -> m-goto-1 101
+107 (goto gate bob) -> m-goto-2 108 116
+108 (goto location10 bob) -> m-goto-2 109 115
+109 (goto location9 bob) -> m-goto-2 110 114
+110 (goto location8 bob) -> m-goto-2 111 113
+111 (goto location7 bob) -> m-goto-1 112
+118 (do-tighten_nut nut7) -> m-tighten_nut-1 119 133 145
+119 (do-pickup_spanner spanner8 bob) -> m-do-pickup_spanner-1 120 132
+120 (goto location5 bob) -> m-goto-2 121 131
+121 (goto location6 bob) -> m-goto-2 122 130
+122 (goto location7 bob) -> m-goto-2 123 129
+123 (goto location8 bob) -> m-goto-2 124 128
+124 (goto location9 bob) -> m-goto-2 125 127
+125 (goto location10 bob) -> m-goto-1 126
+133 (goto gate bob) -> m-goto-2 134 144
+134 (goto location10 bob) -> m-goto-2 135 143
+135 (goto location9 bob) -> m-goto-2 136 142
+136 (goto location8 bob) -> m-goto-2 137 141
+137 (goto location7 bob) -> m-goto-2 138 140
+138 (goto location6 bob) -> m-goto-1 139
+146 (do-tighten_nut nut8) -> m-tighten_nut-1 147 163 177
+147 (do-pickup_spanner spanner4 bob) -> m-do-pickup_spanner-1 148 162
+148 (goto location4 bob) -> m-goto-2 149 161
+149 (goto location5 bob) -> m-goto-2 150 160
+150 (goto location6 bob) -> m-goto-2 151 159
+151 (goto location7 bob) -> m-goto-2 152 158
+152 (goto location8 bob) -> m-goto-2 153 157
+153 (goto location9 bob) -> m-goto-2 154 156
+154 (goto location10 bob) -> m-goto-1 155
+163 (goto gate bob) -> m-goto-2 164 176
+164 (goto location10 bob) -> m-goto-2 165 175
+165 (goto location9 bob) -> m-goto-2 166 174
+166 (goto location8 bob) -> m-goto-2 167 173
+167 (goto location7 bob) -> m-goto-2 168 172
+168 (goto location6 bob) -> m-goto-2 169 171
+169 (goto location5 bob) -> m-goto-1 170
+<==

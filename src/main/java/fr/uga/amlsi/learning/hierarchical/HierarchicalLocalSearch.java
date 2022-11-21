@@ -4,7 +4,6 @@
 package fr.uga.amlsi.learning.hierarchical;
 
 import java.util.ArrayList;
-import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 import java.util.logging.Level;
@@ -20,8 +19,6 @@ import fr.uga.generator.utils.Pair;
 import fr.uga.amlsi.learning.Domain;
 import fr.uga.amlsi.learning.DomainsQueue;
 import fr.uga.amlsi.learning.LocalSearch;
-import fr.uga.amlsi.learning.simulator.DomainSimulator;
-import fr.uga.amlsi.learning.simulator.Movement;
 import fr.uga.amlsi.learning.simulator.hierarchical.HtnDomainSimulator;
 
 /**
@@ -51,8 +48,6 @@ public class HierarchicalLocalSearch extends LocalSearch{
 	public float fitness(
 			Domain indiv, Sample pos, Sample neg, 
 			List<CompressedNegativeExample> compressed, String is) {
-		//System.out.println("PASS");
-		float fit;
 
 		ObservedExample obs = (ObservedExample) pos.getExamples().get(0);
 		Observation initial = obs.getInitialState();
@@ -117,7 +112,7 @@ public class HierarchicalLocalSearch extends LocalSearch{
 		return res;
 	}
 	
-	public List<Domain> neighborsSim(Domain domain) {
+	private List<Domain> neighborsSim(Domain domain) {
 		List<Domain> res = new ArrayList<>();
 		for(Map.Entry<Symbol, Pair<Observation, Observation>> entry :
 			domain.getDomain().entrySet()) {
@@ -197,16 +192,16 @@ public class HierarchicalLocalSearch extends LocalSearch{
 	}
 	
 	/**
-	 * 
-	 * @param indiv
-	 * @param pos
-	 * @param neg
-	 * @param compressed
-	 * @param is
-	 * @param size
-	 * @param epoch
-	 * @param tabou
-	 * @return
+	 * Tabu search (TS)
+	 * @param indiv initial domain
+	 * @param pos positive examples
+	 * @param neg negative examples
+	 * @param compressed compressed examples
+	 * @param is initial state
+	 * @param size size of the TS
+	 * @param epoch number of epoch
+	 * @param tabou tabou domains
+	 * @return domain
 	 */
 	public Domain tabu(	
 			Domain indiv, 
@@ -217,7 +212,6 @@ public class HierarchicalLocalSearch extends LocalSearch{
 			int size, 
 			int epoch,
 			List<Domain> tabou) {
-//		System.out.println("Test !!!!");
 		ObservedExample obs = (ObservedExample) pos.getExamples().get(0);
 		Observation initial = obs.getInitialState();
 		DomainsQueue queue = new DomainsQueue(size, tabou);
@@ -231,7 +225,6 @@ public class HierarchicalLocalSearch extends LocalSearch{
 		tabou.remove(indiv);
 		int i =0;
 		for(i =0; i < epoch; i ++) {
-//			System.out.println(i+"/"+epoch);
 			try {
 				Domain choosen = queue.next();
 				tabu = new HtnDomainSimulator(
@@ -283,6 +276,18 @@ public class HierarchicalLocalSearch extends LocalSearch{
 		return res;
 	}
 	
+	/**
+	 * Tabu search (TS)
+	 * @param indiv initial domain
+	 * @param pos positive examples
+	 * @param neg negative examples
+	 * @param compressed compressed examples
+	 * @param is initial state
+	 * @param size size of the TS
+	 * @param epoch number of epoch
+	 * @param tabou tabou domains
+	 * @return domain
+	 */
 	public Domain tabuSim(	
 			Domain indiv, 
 			Sample pos, 
@@ -292,7 +297,6 @@ public class HierarchicalLocalSearch extends LocalSearch{
 			int size, 
 			int epoch,
 			List<Domain> tabou) {
-//		System.out.println("Test !!!!");
 		ObservedExample obs = (ObservedExample) pos.getExamples().get(0);
 		Observation initial = obs.getInitialState();
 		DomainsQueue queue = new DomainsQueue(size, tabou);

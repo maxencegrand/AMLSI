@@ -10,7 +10,6 @@ import java.util.LinkedHashMap;
 import java.util.LinkedList;
 import java.util.List;
 import java.util.Map;
-import java.util.PriorityQueue;
 
 import fr.uga.generator.symbols.Method;
 import fr.uga.generator.symbols.Symbol;
@@ -27,35 +26,35 @@ import fr.uga.generator.symbols.Task;
  */
 public class CFG {
 	/**
-	 * 
+	 * The initial method
 	 */
 	private static final Method INIT = new Method("S"); 
 	/**
-	 * 
+	 * Non Terminal symbols
 	 */
 	private List<Symbol> nonTerminals;
 	/**
-	 * 
+	 * Terminal symbols
 	 */
 	private List<Symbol> terminals;
 	/**
-	 * 
+	 * All language rules
 	 */
 	private Map<Symbol, List<CfgRule>> rules;
 	/**
-	 * 
+	 * All methods name
 	 */
 	private Map<String, Symbol> methodsName;
 	/**
-	 * 
+	 * All instantiations
 	 */
 	private Map<Task, List<Method>> instantiation;
 	/**
-	 * 
+	 * Accepted traces
 	 */
 	private List<TaskTrace> accepted;
 	/**
-	 * 
+	 * Constructs
 	 */
 	public CFG() {
 		this.nonTerminals = new ArrayList<>();
@@ -104,7 +103,8 @@ public class CFG {
 	}
 	
 	/**
-	 * 
+	 * Clone
+	 * @return Clone
 	 */
 	public CFG clone() {
 		CFG clone = new CFG();
@@ -114,8 +114,8 @@ public class CFG {
 	}
 	
 	/**
-	 * 
-	 * @param r
+	 * Add a new rule
+	 * @param r Rule
 	 */
 	public void add(CfgRule r) {
 		Method met = (Method) r.getLeft();
@@ -146,7 +146,8 @@ public class CFG {
 	}
 	
 	/**
-	 * 
+	 * to string method
+	 * @return a string
 	 */
 	public String toString() {
 		StringBuilder str = new StringBuilder();
@@ -172,8 +173,8 @@ public class CFG {
 	
 	
 	/**
-	 * 
-	 * @return
+	 * Methods getter
+	 * @return methods
 	 */
 	public List<Method> getMethods() {
 		List<Method> res = new ArrayList<>();
@@ -191,9 +192,9 @@ public class CFG {
 	}
 	
 	/**
-	 * 
-	 * @param traces
-	 * @return
+	 * Simplify the methods set using the greedy approximation
+	 * @param traces all traces
+	 * @return The methods
 	 */
 	public CFG simplificationGreedy(List<TaskTrace> traces) {
 		CFG res = new CFG();
@@ -230,9 +231,9 @@ public class CFG {
 	}
 	
 	/**
-	 * 
-	 * @param traces
-	 * @return
+	 * Simplify the methods set using the heuristic approximation
+	 * @param traces all traces
+	 * @return The methods
 	 */
 	public static CFG simplificationHeuristic(
 			Map<Task, List<TaskTrace>> traces,
@@ -299,9 +300,10 @@ public class CFG {
 	}
 	
 	/**
-	 * 
-	 * @param traces
-	 * @return
+	 * The greedy approximations
+	 * @param traces2 all traces
+	 * @param all rules
+	 * @return Methods set decompositions
 	 */
 	private CFG greedy(
 			List<TaskTrace> traces2, 
@@ -363,44 +365,7 @@ public class CFG {
 		return current;
 	}
 	
-	/**
-	 * 
-	 * @param traces
-	 * @return
-	 */
-	public CFG simplificationShortestPath(List<TaskTrace> traces) {
-		CFG res = new CFG();
-		List<CfgRule> allRules = this.allRules();
-		Iterator<CfgRule> it = allRules.iterator();
-		while(it.hasNext()) {
-			CfgRule r = it.next();
-			if(r.getRight().isEmpty()) {
-				it.remove();
-				res.add(r);
-			}
-		}
-		LinkedList<CFG> closed = new LinkedList<>();
-		PriorityQueue <CFG> opened = new PriorityQueue<>(new ComparatorSize());
-		opened.add(res);
-		int i = 0;
-		while(!opened.isEmpty()) {
-			CFG current = opened.poll();
-			System.out.println((++i)+" "+allRules.size()+" "+current.allRules().size());
-			closed.add(current);
-			if(current.acceptAll(traces)) {
-				return current;
-			}
-			for(CfgRule r : allRules) {
-				CFG newCfg = current.clone();
-				newCfg.add(r);
-				if(!closed.contains(newCfg) && !opened.contains(newCfg)) {
-					opened.add(newCfg);
-				}
-			}
-			
-		}
-		return null;
-	}
+
 	
 	
 	/**
@@ -425,9 +390,9 @@ public class CFG {
 	
 	
 	/**
-	 * 
-	 * @param t
-	 * @return
+	 * Try to parse traces
+	 * @param t trace
+	 * @return true if the trace is parsed
 	 */
 	public boolean parse(TaskTrace t) {
 		LinkedList<Trace> stack = new LinkedList<>();
@@ -476,9 +441,10 @@ public class CFG {
 	
 
 	/**
-	 * 
-	 * @param t
-	 * @return
+	 * Try to parse traces
+	 * @param t trace
+	 * @param met All methods
+	 * @return true if the trace is parsed
 	 */
 	public boolean parse(TaskTrace t, List<Symbol> met) {
 		LinkedList<Trace> stack = new LinkedList<>();
@@ -525,7 +491,7 @@ public class CFG {
 		return false;
 	}
 	
-	public boolean parse2(TaskTrace t, List<Symbol> met) {
+	private boolean parse2(TaskTrace t, List<Symbol> met) {
 		LinkedList<Trace> stack = new LinkedList<>();
 		List<Symbol> tmp = new ArrayList<>();
 		tmp.add(t.getTask());
@@ -574,9 +540,9 @@ public class CFG {
 	}
 	
 	/**
-	 * 
-	 * @param l
-	 * @return
+	 * Check if all symbols are terminals
+	 * @param l list of symbols
+	 * @return boolean
 	 */
 	public boolean isOnlyTerminal(List<Symbol> l) {
 		for(Symbol s: l) {
@@ -588,9 +554,9 @@ public class CFG {
 	}
 	
 	/**
-	 * 
-	 * @param traces
-	 * @return
+	 * Compute the score
+	 * @param traces all traces
+	 * @return score
 	 */
 	public int score(List<TaskTrace> traces) {
 		int res = 0;
@@ -606,9 +572,9 @@ public class CFG {
 	}
 
 	/**
-	 * 
-	 * @param traces
-	 * @return
+	 * Check if all traces are accepted
+	 * @param traces traces
+	 * @return true if all traces are accepted
 	 */
 	public boolean acceptAll(List<TaskTrace> traces) {
 		for(TaskTrace trace : traces) {
@@ -625,8 +591,8 @@ public class CFG {
 
 	
 	/**
-	 * 
-	 * @return
+	 * Get all rules
+	 * @return rules
 	 */
 	public List<CfgRule> allRules() {
 		List<CfgRule> res = new ArrayList<>();
@@ -635,9 +601,9 @@ public class CFG {
 	}
 	
 	/**
-	 * 
-	 * @param t
-	 * @return
+	 * Get all rules for a task t
+	 * @param t the task
+	 * @return rules
 	 */
 	public List<CfgRule> allRules(Task t) {
 		List<CfgRule> res = new ArrayList<>();
@@ -656,12 +622,9 @@ public class CFG {
 	 * @param constant
 	 */
 	private void instantiate(Map<String, String> constant) {
-//		System.out.println("//////////////////////////////////////"+constant);
 		this.instantiation = new HashMap<>();
 		this.rules.forEach((k,v) -> {
-//			System.out.println(k);
 			v.forEach(r -> {
-//				System.out.println(r);
 				r.getLeft().allInstances(constant).forEach(s -> {
 					Method m = (Method)s;
 					if(!this.instantiation.containsKey(m.getToDecompose())) {
@@ -765,7 +728,7 @@ public class CFG {
 	 * @param toDerive
 	 * @return
 	 */
-	public static boolean compatible(List<Symbol> toAccept, List<Symbol> toDerive) {
+	private static boolean compatible(List<Symbol> toAccept, List<Symbol> toDerive) {
 		int nbPrim = 0;
 		int idxPrimitive = 0;
 		if(toAccept.isEmpty()) {
@@ -808,9 +771,9 @@ public class CFG {
 	}
 	
 	/**
-	 * 
-	 * @param t
-	 * @return
+	 * Map all traces with methods
+	 * @param t trace
+	 * @return methods
 	 */
 	public Map<TaskTrace, Method> mapTraceMethod(List<TaskTrace> t) {
 		Map<TaskTrace, Method> res = new HashMap<>();

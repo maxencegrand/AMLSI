@@ -1,0 +1,105 @@
+(define (domain spanner)
+(:requirements :typing :strips :hierarchy :method-preconditions :negative-preconditions)
+(:types
+	location locatable - object
+	man nut spanner - locatable
+)
+
+(:predicates
+	(at ?m - locatable ?l - location)
+	(carrying ?m - man ?s - spanner)
+	(useable ?s - spanner)
+	(link ?l1 - location ?l2 - location)
+	(tightened ?n - nut)
+	(loose ?n - nut))
+
+;;; Compound tasks
+(:task goto
+ :parameters (?l - location ?m - man))
+
+(:task do-pickup_spanner
+ :parameters (?s - spanner ?m - man))
+
+(:task do-tighten_nut
+  :parameters (?n - nut))
+
+;;; Methods
+(:method m-goto-0
+    :parameters (?l - location ?m - man)
+    :task (goto ?l ?m)
+    :precondition (and (at ?m ?l))
+    :ordered-subtasks (and)
+)
+
+(:method m-goto-1
+    :parameters (?l1 ?l2 - location ?m - man)
+    :task (goto ?l1 ?m)
+:precondition (and (not(at ?m ?l1)) (at ?m ?l2) (link ?l2 ?l1))
+    :ordered-subtasks (and
+        (walk ?l2 ?l1 ?m))
+)
+
+(:method m-goto-2
+    :parameters (?l1 ?l2 - location ?m - man)
+    :task (goto ?l1 ?m)
+    :precondition (and (not(at ?m ?l1)) (not(at ?m ?l2)) (link ?l2 ?l1))
+    :ordered-subtasks (and
+        (goto ?l2 ?m)
+        (walk ?l2 ?l1 ?m))
+)
+
+(:method m-do-pickup_spanner-0
+    :parameters (?s - spanner ?m - man)
+    :task (do-pickup_spanner ?s ?m)
+    :precondition (carrying ?m ?s)
+    :ordered-subtasks (and)
+)
+
+(:method m-do-pickup_spanner-1
+    :parameters (?l - location ?s - spanner ?m - man)
+    :task (do-pickup_spanner ?s ?m)
+    :precondition (and (not(carrying ?m ?s)) (at ?s ?l))
+    :ordered-subtasks (and
+        (goto ?l ?m)
+        (pickup_spanner ?l ?s ?m))
+)
+
+(:method m-tighten_nut-0
+    :parameters (?n - nut)
+    :task (do-tighten_nut ?n)
+    :precondition (and (tightened ?n))
+    :ordered-subtasks (and)
+)
+
+(:method m-tighten_nut-1
+    :parameters (?l - location ?n - nut ?m - man ?s - spanner)
+    :task (do-tighten_nut ?n)
+    :precondition (and (loose ?n) (useable ?s) (at ?n ?l))
+    :ordered-subtasks (and
+        (do-pickup_spanner ?s ?m)
+        (goto ?l ?m)
+        (tighten_nut ?l ?s ?m ?n))
+)
+
+(:action walk
+        :parameters (?start - location ?end - location ?m - man)
+        :precondition (and (at ?m ?start)
+                           (link ?start ?end))
+        :effect (and (not (at ?m ?start)) (at ?m ?end)))
+
+(:action pickup_spanner
+        :parameters (?l - location ?s - spanner ?m - man)
+        :precondition (and (at ?m ?l)
+                           (at ?s ?l))
+        :effect (and (not (at ?s ?l))
+                     (carrying ?m ?s)))
+
+(:action tighten_nut
+        :parameters (?l - location ?s - spanner ?m - man ?n - nut)
+        :precondition (and (at ?m ?l)
+		      	   (at ?n ?l)
+			   (carrying ?m ?s)
+			   (useable ?s)
+			   (loose ?n))
+        :effect (and (not (loose ?n))(not (useable ?s)) (tightened ?n)))
+)

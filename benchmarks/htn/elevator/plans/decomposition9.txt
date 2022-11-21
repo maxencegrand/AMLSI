@@ -1,0 +1,169 @@
+==>
+2 up floor_5 floor_6
+4 up floor_6 floor_7
+6 up floor_7 floor_8
+8 up floor_8 floor_9
+10 up floor_9 floor_10
+11 board floor_10 passenger_0
+13 down floor_10 floor_9
+15 down floor_9 floor_8
+17 down floor_8 floor_7
+19 down floor_7 floor_6
+21 down floor_6 floor_5
+23 down floor_5 floor_4
+25 down floor_4 floor_3
+27 down floor_3 floor_2
+28 depart floor_2 passenger_0
+31 down floor_2 floor_1
+32 board floor_1 passenger_1
+34 up floor_1 floor_2
+36 up floor_2 floor_3
+38 up floor_3 floor_4
+40 up floor_4 floor_5
+42 up floor_5 floor_6
+44 up floor_6 floor_7
+46 up floor_7 floor_8
+48 up floor_8 floor_9
+50 up floor_9 floor_10
+52 up floor_10 floor_11
+54 up floor_11 floor_12
+55 depart floor_12 passenger_1
+58 down floor_12 floor_11
+60 down floor_11 floor_10
+62 down floor_10 floor_9
+63 board floor_9 passenger_2
+65 up floor_9 floor_10
+67 up floor_10 floor_11
+69 up floor_11 floor_12
+70 depart floor_12 passenger_2
+73 down floor_12 floor_11
+75 down floor_11 floor_10
+77 down floor_10 floor_9
+79 down floor_9 floor_8
+81 down floor_8 floor_7
+83 down floor_7 floor_6
+85 down floor_6 floor_5
+87 down floor_5 floor_4
+88 board floor_4 passenger_3
+90 up floor_4 floor_5
+92 up floor_5 floor_6
+94 up floor_6 floor_7
+96 up floor_7 floor_8
+98 up floor_8 floor_9
+100 up floor_9 floor_10
+101 depart floor_10 passenger_3
+104 down floor_10 floor_9
+106 down floor_9 floor_8
+108 down floor_8 floor_7
+110 down floor_7 floor_6
+112 down floor_6 floor_5
+114 down floor_5 floor_4
+115 board floor_4 passenger_4
+117 up floor_4 floor_5
+119 up floor_5 floor_6
+121 up floor_6 floor_7
+122 depart floor_7 passenger_4
+125 down floor_7 floor_6
+127 down floor_6 floor_5
+129 down floor_5 floor_4
+131 down floor_4 floor_3
+132 board floor_3 passenger_5
+134 up floor_3 floor_4
+136 up floor_4 floor_5
+137 depart floor_5 passenger_5
+140 up floor_5 floor_6
+142 up floor_6 floor_7
+144 up floor_7 floor_8
+145 board floor_8 passenger_6
+147 down floor_8 floor_7
+149 down floor_7 floor_6
+151 down floor_6 floor_5
+153 down floor_5 floor_4
+154 depart floor_4 passenger_6
+157 up floor_4 floor_5
+159 up floor_5 floor_6
+161 up floor_6 floor_7
+162 board floor_7 passenger_7
+164 up floor_7 floor_8
+165 depart floor_8 passenger_7
+root 0 29 56 71 102 123 138 155
+0 (deliver-person passenger_0) -> m-deliver-person 1 11 12 28
+1 (goto floor_10) -> m-goto-3 2 3
+3 (goto floor_10) -> m-goto-3 4 5
+5 (goto floor_10) -> m-goto-3 6 7
+7 (goto floor_10) -> m-goto-3 8 9
+9 (goto floor_10) -> m-goto-1 10
+12 (goto floor_2) -> m-goto-4 13 14
+14 (goto floor_2) -> m-goto-4 15 16
+16 (goto floor_2) -> m-goto-4 17 18
+18 (goto floor_2) -> m-goto-4 19 20
+20 (goto floor_2) -> m-goto-4 21 22
+22 (goto floor_2) -> m-goto-4 23 24
+24 (goto floor_2) -> m-goto-4 25 26
+26 (goto floor_2) -> m-goto-2 27
+29 (deliver-person passenger_1) -> m-deliver-person 30 32 33 55
+30 (goto floor_1) -> m-goto-2 31
+33 (goto floor_12) -> m-goto-3 34 35
+35 (goto floor_12) -> m-goto-3 36 37
+37 (goto floor_12) -> m-goto-3 38 39
+39 (goto floor_12) -> m-goto-3 40 41
+41 (goto floor_12) -> m-goto-3 42 43
+43 (goto floor_12) -> m-goto-3 44 45
+45 (goto floor_12) -> m-goto-3 46 47
+47 (goto floor_12) -> m-goto-3 48 49
+49 (goto floor_12) -> m-goto-3 50 51
+51 (goto floor_12) -> m-goto-3 52 53
+53 (goto floor_12) -> m-goto-1 54
+56 (deliver-person passenger_2) -> m-deliver-person 57 63 64 70
+57 (goto floor_9) -> m-goto-4 58 59
+59 (goto floor_9) -> m-goto-4 60 61
+61 (goto floor_9) -> m-goto-2 62
+64 (goto floor_12) -> m-goto-3 65 66
+66 (goto floor_12) -> m-goto-3 67 68
+68 (goto floor_12) -> m-goto-1 69
+71 (deliver-person passenger_3) -> m-deliver-person 72 88 89 101
+72 (goto floor_4) -> m-goto-4 73 74
+74 (goto floor_4) -> m-goto-4 75 76
+76 (goto floor_4) -> m-goto-4 77 78
+78 (goto floor_4) -> m-goto-4 79 80
+80 (goto floor_4) -> m-goto-4 81 82
+82 (goto floor_4) -> m-goto-4 83 84
+84 (goto floor_4) -> m-goto-4 85 86
+86 (goto floor_4) -> m-goto-2 87
+89 (goto floor_10) -> m-goto-3 90 91
+91 (goto floor_10) -> m-goto-3 92 93
+93 (goto floor_10) -> m-goto-3 94 95
+95 (goto floor_10) -> m-goto-3 96 97
+97 (goto floor_10) -> m-goto-3 98 99
+99 (goto floor_10) -> m-goto-1 100
+102 (deliver-person passenger_4) -> m-deliver-person 103 115 116 122
+103 (goto floor_4) -> m-goto-4 104 105
+105 (goto floor_4) -> m-goto-4 106 107
+107 (goto floor_4) -> m-goto-4 108 109
+109 (goto floor_4) -> m-goto-4 110 111
+111 (goto floor_4) -> m-goto-4 112 113
+113 (goto floor_4) -> m-goto-2 114
+116 (goto floor_7) -> m-goto-3 117 118
+118 (goto floor_7) -> m-goto-3 119 120
+120 (goto floor_7) -> m-goto-1 121
+123 (deliver-person passenger_5) -> m-deliver-person 124 132 133 137
+124 (goto floor_3) -> m-goto-4 125 126
+126 (goto floor_3) -> m-goto-4 127 128
+128 (goto floor_3) -> m-goto-4 129 130
+130 (goto floor_3) -> m-goto-2 131
+133 (goto floor_5) -> m-goto-3 134 135
+135 (goto floor_5) -> m-goto-1 136
+138 (deliver-person passenger_6) -> m-deliver-person 139 145 146 154
+139 (goto floor_8) -> m-goto-3 140 141
+141 (goto floor_8) -> m-goto-3 142 143
+143 (goto floor_8) -> m-goto-1 144
+146 (goto floor_4) -> m-goto-4 147 148
+148 (goto floor_4) -> m-goto-4 149 150
+150 (goto floor_4) -> m-goto-4 151 152
+152 (goto floor_4) -> m-goto-2 153
+155 (deliver-person passenger_7) -> m-deliver-person 156 162 163 165
+156 (goto floor_7) -> m-goto-3 157 158
+158 (goto floor_7) -> m-goto-3 159 160
+160 (goto floor_7) -> m-goto-1 161
+163 (goto floor_8) -> m-goto-1 164
+<==

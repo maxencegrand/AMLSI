@@ -110,8 +110,8 @@ public class HtnDomain extends Domain{
 	}
 
 	/**
-	 * 
-	 * @param domain
+	 * Extract action model
+	 * @param domain the domain
 	 */
 	public void extractPreconditionsEffects(String domain) {
 		PDDLParser parser = new PDDLParser();
@@ -141,7 +141,6 @@ public class HtnDomain extends Domain{
 
 			//Extract precondition
 
-			//System.out.println(action+" "+t.getPreconditions().getAtom());
 			if(t.getPreconditions().getChildren().isEmpty()) {
 				PDDLExpression exp = t.getPreconditions();
 				String name = exp.getAtom().get(0).getImage();
@@ -216,9 +215,14 @@ public class HtnDomain extends Domain{
 				}
 			}
 		});
-		//System.exit(1);
 	}
 
+	/**
+	 * Extract methods
+	 * @param domain the domain
+	 * @param tasks all tasks
+	 * @return all methods
+	 */
 	public List<Method> extractMethods(String domain, List<Symbol> tasks) {
 		PDDLParser parser = new PDDLParser();
 		try {
@@ -308,8 +312,8 @@ public class HtnDomain extends Domain{
 		return methods;
 	}
 	/**
-	 * 
-	 * @return
+	 * Generate HDDL domain
+	 * @return HDDL domain
 	 */
 	public String generateHDDL(
 			String name, 
@@ -320,11 +324,6 @@ public class HtnDomain extends Domain{
 				this.decode();
 		Map<Symbol, Observation> preconditions = p.getX();
 		Map<Symbol, Observation> postconditions = p.getY();
-		//		this.getA().forEach(a -> {
-		//			if(a instanceof Method) {
-		//			}
-		//			System.out.println(a.getListParameters());
-		//		});
 		String res = "(define (domain "+name+")\n";
 		res += "(:requirements :strips :typing :negative-preconditions :hierarchy :method-preconditions)\n";
 
@@ -472,8 +471,8 @@ public class HtnDomain extends Domain{
 	}
 
 	/**
-	 * 
-	 * @param d
+	 * Add methods to a domain d
+	 * @param d domain
 	 */
 	public void mergeMethods(Domain d) {
 		d.getDomain().forEach((k,v)->{
@@ -492,8 +491,8 @@ public class HtnDomain extends Domain{
 	}
 	
 	/**
-	 * 
-	 * @param d
+	 * Add actions to a domain d
+	 * @param d domain
 	 */
 	public void mergeActions(Domain d) {
 		d.getDomain().forEach((k,v)->{
@@ -589,7 +588,7 @@ public class HtnDomain extends Domain{
 	 * @param t
 	 * @return
 	 */
-	public Pair<Float, Float> test(
+	private Pair<Float, Float> test(
 			DecompositionTrace t,
 			Observation initial,
 			HierarchicalSimulator original) {
@@ -624,7 +623,6 @@ public class HtnDomain extends Domain{
 				}else if(original.test(t.prefix(i), a, dec)) {
 					c++;
 				} else {
-//					System.out.println(t.prefix(i)+" "+a+" "+dec);
 				}
 				current = this.apply(t.getDecomposition(i, a), current, instance);
 			} else {
@@ -645,16 +643,15 @@ public class HtnDomain extends Domain{
 	}
 	
 	/**
-	 * 
-	 * @param contants
-	 * @return
+	 * Instantiate HDDL domain
+	 * @param contants constants for instantiation
+	 * @return Grounded HDDL domain
 	 */
 	private Map<Symbol, Pair<Observation, Observation>> instantiation(
 			Map<String, String> contants) {
 		Map<Symbol, Pair<Observation, Observation>> res = new HashMap<>();
 		//instantiate primitive tasks
 		for(Symbol op : this.getDomain().keySet()) {
-//			System.out.println(op+" "+op.getParameters());
 			Observation prec = this.getPrecond(op);
 			Observation eff = this.getPostcond(op);
 			for(Symbol a : op.allInstances(contants)) {
@@ -795,7 +792,7 @@ public class HtnDomain extends Domain{
 		return null;
 	}
 	
-	public Trace decomposePrint(
+	private Trace decomposePrint(
 			Symbol task,
 			Observation state,
 			Map<Symbol, Pair<Observation, Observation>> instance,
@@ -850,7 +847,15 @@ public class HtnDomain extends Domain{
 		return null;
 	}
 	
-	public Trace decompose2(
+	/**
+	 * 
+	 * @param task
+	 * @param state
+	 * @param instance
+	 * @param taskMap
+	 * @return
+	 */
+	private Trace decompose2(
 			Symbol task,
 			Observation state,
 			Map<Symbol, Pair<Observation, Observation>> instance,
@@ -932,7 +937,7 @@ public class HtnDomain extends Domain{
 		return res;
 	}
 	
-	public boolean isConsistant() {
+//	public boolean isConsistant() {
 //		for(Map.Entry<Symbol, Pair<Observation, Observation>> entry :
 //			this.getDomain().entrySet()) {
 //			for(Symbol s : entry.getValue().getX().getPredicatesSymbols()) {
@@ -976,8 +981,8 @@ public class HtnDomain extends Domain{
 //	            }
 //			}
 //		}
-		return true;
-	}
+//		return true;
+//	}
 
 	/**
 	 * 

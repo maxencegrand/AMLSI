@@ -1,0 +1,8 @@
+0: (        up floor_2 floor_3) [0]
+1: ( board floor_3 passenger_0) [0]
+2: (      down floor_3 floor_2) [0]
+3: (depart floor_2 passenger_0) [0]
+4: (        up floor_2 floor_3) [0]
+5: ( board floor_3 passenger_1) [0]
+6: (      down floor_3 floor_2) [0]
+7: (depart floor_2 passenger_1) [0]

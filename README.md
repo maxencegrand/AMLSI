@@ -8,7 +8,9 @@ AMLSI is an action model learner using interactions with state machine. The key 
 * **Learning Phase**: It is during this phase that AMLSI learns the action model. To learn the action model, AMLSI will rely on Regular Grammar Induction. Indeed, planning problems are related to state machines and these state machines are equivalent to regular grammars. Moreover, Regular Grammar Induction is a well-defined problem, and many algorithms has been proposed to solve it like RPNI.
 
 
+## Contact
 
+Maxence Grand (Maxence.Grand@univ-grenoble-alpes.fr)
 
 ## Dependency
 

@@ -253,6 +253,11 @@ public class Partition{
         return res;
     }
     
+    /**
+     * 
+     * @param i
+     * @return
+     */
     public List<Integer> getMins(int i) {
         List<Integer> res = new ArrayList<>();
 
